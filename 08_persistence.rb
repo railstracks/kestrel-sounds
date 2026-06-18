@@ -79,7 +79,7 @@ live_loop :m1_erosion do
 
   if beat < 300
     # Erosion curve: 0 at start, 1 at end of movement
-    erosion = (beat / 300.0).min(1.0)
+    erosion = [beat / 300.0, 1.0].min
 
     idx = cycle % $motif.length
     note = $motif[idx]
@@ -330,7 +330,7 @@ live_loop :m6_metamorphosis do
     local = beat - 1500
 
     # Morph parameter: 0 (stone) → 1 (air) across movement
-    morph = (local / 300.0).min(1.0)
+    morph = [local / 300.0, 1.0].min
 
     idx = cycle % $motif.length
     note = $motif[idx]
