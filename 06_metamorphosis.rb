@@ -116,7 +116,7 @@ live_loop :metamorph_voice do
     sleep_time = [5, 4, 5, 6, 4][note_idx]
   end
 
-  use_synth 'kestrel_metamorph'
+  use_synth :kestrel_metamorph
 
   # The morph parameter drives everything:
   # - harmonic_ratio: 1 → 2.5 (simple → inharmonic)
@@ -163,7 +163,7 @@ live_loop :stone_anchor do
     end
 
     if anchor_amp > 0.02
-      use_synth 'kestrel_metamorph'
+      use_synth :kestrel_metamorph
       play anchor[cycle % anchor.length],
         morph: 0,        # Always stone
         harmonic_ratio: 1.0,
@@ -203,7 +203,7 @@ live_loop :air_trace do
       0.12
     end
 
-    use_synth 'kestrel_metamorph'
+    use_synth :kestrel_metamorph
     play motif[cycle % motif.length] + 12,  # An octave higher
       morph: 0.8 + (morph_val_for(beat) * 0.2).min(0.2),
       harmonic_ratio: 2.0,

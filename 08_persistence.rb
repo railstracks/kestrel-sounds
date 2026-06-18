@@ -180,7 +180,7 @@ live_loop :m3_wraith do
     # Memory strength fades over the movement
     memory_strength = 1.0 - (local / 300.0) * 0.4
 
-    use_synth 'kestrel_wraith'
+    use_synth :kestrel_wraith
     play note,
       filter_start: 40 + (idx * 5),
       filter_end: (60 + idx * 8) * memory_strength,
@@ -257,7 +257,7 @@ live_loop :m4_layer3 do
     idx = cycle % $motif.length
     note = $motif[(idx + 2) % $motif.length]
 
-    use_synth 'kestrel_wraith'
+    use_synth :kestrel_wraith
     play note,
       filter_start: 50,
       filter_end: 70,
@@ -296,7 +296,7 @@ live_loop :m5_interstice do
     # Silence duration increases — the motif dissolves into space
     silence_factor = 1.0 + (local / 300.0) * 4.0
 
-    use_synth 'kestrel_wraith'
+    use_synth :kestrel_wraith
     play note,
       filter_start: 45,
       filter_end: 55 + idx * 3,
@@ -335,7 +335,7 @@ live_loop :m6_metamorphosis do
     idx = cycle % $motif.length
     note = $motif[idx]
 
-    use_synth 'kestrel_metamorph'
+    use_synth :kestrel_metamorph
     play note,
       morph: morph,
       harmonic_ratio: 1.0 + morph * 1.5,
@@ -412,7 +412,7 @@ live_loop :m7_recurrence do
       # Voice changes with each recurrence
       case recurrence_idx
       when 0  # Original — wraith, low filter
-        use_synth 'kestrel_wraith'
+        use_synth :kestrel_wraith
         play note,
           filter_start: 60, filter_end: 55 + idx * 5,
           filter_attack: 0.8, filter_release: dur * 0.6,
@@ -420,7 +420,7 @@ live_loop :m7_recurrence do
           pan: (idx - 2) * 0.08, res: 0.4
 
       when 1  # Widened — wraith, more movement
-        use_synth 'kestrel_wraith'
+        use_synth :kestrel_wraith
         play note,
           filter_start: 65, filter_end: 70 + idx * 8,
           filter_attack: 0.5, filter_release: dur * 0.7,
@@ -439,7 +439,7 @@ live_loop :m7_recurrence do
         end
 
       when 3  # Contour-only — metamorph at high morph
-        use_synth 'kestrel_metamorph'
+        use_synth :kestrel_metamorph
         play note,
           morph: 0.65 + idx * 0.05,
           harmonic_ratio: 2.0 + idx * 0.1,
@@ -451,7 +451,7 @@ live_loop :m7_recurrence do
           amp: 0.16, pan: rrand(-0.15, 0.15)
 
       when 4  # Reconstituted — wraith, slow, deep
-        use_synth 'kestrel_wraith'
+        use_synth :kestrel_wraith
         play note,
           filter_start: 50, filter_end: 55 + idx * 3,
           filter_attack: 1.2, filter_release: dur * 0.8,

@@ -102,7 +102,7 @@ live_loop :recurrence_first do
     note = original_motif[idx]
     dur = original_rhythm[idx]
 
-    use_synth 'kestrel_wraith'
+    use_synth :kestrel_wraith
     play note,
       filter_start: 60,
       filter_end: 55 + idx * 5,
@@ -137,7 +137,7 @@ live_loop :recurrence_second do
     dur = first_rhythm[idx]
 
     # The return has more filter activity — memory is animated
-    use_synth 'kestrel_wraith'
+    use_synth :kestrel_wraith
     play note,
       filter_start: 65,
       filter_end: 70 + idx * 8,
@@ -219,7 +219,7 @@ live_loop :recurrence_fourth do
     dur = third_rhythm[idx]
 
     # High morph: the sound has changed identity
-    use_synth 'kestrel_metamorph'
+    use_synth :kestrel_metamorph
     play note,
       morph: 0.65 + (idx * 0.05),
       harmonic_ratio: 2.0 + (idx * 0.1),
@@ -261,7 +261,7 @@ live_loop :recurrence_final do
 
     # Final return: wraith, but with deep, slow filter
     # The voice is back, but it has been transformed.
-    use_synth 'kestrel_wraith'
+    use_synth :kestrel_wraith
     play note,
       filter_start: 50,
       filter_end: 55 + idx * 3,   # Subtle movement now. Measured.
