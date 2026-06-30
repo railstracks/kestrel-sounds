@@ -35,3 +35,31 @@ sound decays, patterns erode, and the degradation *is* the composition.
 The verify esolang interpreter outputs JSON events (clean/dirty cell state, values, timing) that bridge.py converts to OSC for Sonic Pi. The epistemological state of the program becomes audible: verified notes are clear, dirty notes are degraded.
 
 See `../verifylang/BRIDGE-DESIGN.md` for architecture and musical mapping.
+
+## Audio Renders
+
+Studies can be rendered to audio files headlessly using the included pipeline:
+
+```bash
+# 1. Start Sonic Pi server headless (creates null sink, routes audio)
+bash start_sonic_pi.sh
+
+# 2. Render a study to WAV
+ruby render.rb 01_erosion.rb /tmp/output.wav 250
+
+# 3. Convert to FLAC (lossless, ~87% smaller)
+sox /tmp/output.wav /tmp/output.flac
+```
+
+See `render_all.sh` for batch rendering with estimated durations.
+
+### Available Renders (v0.1-audio)
+
+| Study | Duration | FLAC Size |
+|-------|----------|-----------|
+| 01 Erosion | 4:01 | 5.3 MB |
+| 02 Phase Drift | 3:41 | 4.0 MB |
+| 03 Wraith | 3:21 | 6.5 MB |
+| 04 Accretion | 2:31 | 4.1 MB |
+
+Renders available via GitHub Releases (tag: `v0.1-audio`).
