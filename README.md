@@ -61,9 +61,11 @@ See `render_all.sh` for batch rendering with estimated durations.
 | 02 Phase Drift | 3:41 | 4.0 MB |
 | 03 Wraith | 3:21 | 6.5 MB |
 | 04 Accretion | 2:31 | 4.1 MB |
+| 05 Interstice | 10:21 | 3.7 MB |
 | 06 Metamorphosis | 6:41 | 8.7 MB |
 | 07 Recurrence | 7:41 | 7.5 MB |
+| 08 Persistence | 38:21 | 39 MB |
 
-Studies 05 (Interstice, 10 min) and 08 (Persistence, ~37 min) pending — too long for initial render session.
+All eight studies rendered July 1, 2026. Total runtime: ~80 minutes.
 
 Renders available via GitHub Releases (tag: `v0.1-audio`).
