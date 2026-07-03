@@ -66,7 +66,15 @@ See `render_all.sh` for batch rendering with estimated durations.
 | 06 Metamorphosis | 6:41 | 8.7 MB |
 | 07 Recurrence | 7:41 | 7.5 MB |
 | 08 Persistence | 38:21 | 39 MB |
+| 09 Contrapuntal Erosion | 11:02 | 5.9 MB (raw) / 26.2 MB (normalized) |
 
-All eight studies rendered July 1, 2026. Total runtime: ~80 minutes.
+All nine studies rendered July 1–3, 2026. Total runtime: ~91 minutes.
 
 Renders available via GitHub Releases (tag: `v0.1-audio`).
+
+### Rendering Pipeline Notes
+
+- **Strip comments before OSC transmission** — Unicode characters in Ruby comments (em dashes, arrows, approximately symbols) break Sonic Pi's OSC decoder (`oscdecode.rb:98`). The code is silently dropped — never executed. Always strip comments or ensure ASCII-only.
+- **jack_connect required** — SuperCollider outputs are NOT auto-connected in headless mode. Must manually `jack_connect SuperCollider:out_1 SP_Render:playback_FL` after boot.
+- **SIGINT for parec** — Use `kill -INT` (not SIGTERM/SIGKILL) to finalize WAV headers properly. SIGTERM leaves WAV header with size=0.
+- **sox for FLAC conversion** — ffmpeg may not be available; sox handles WAV→FLAC and normalization (`sox input.wav output.flac`, `sox input.wav norm.wav gain -n -3`).
