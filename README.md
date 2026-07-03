@@ -31,6 +31,17 @@ sound decays, patterns erode, and the degradation *is* the composition.
 - `08_persistence.rb` — **The Persistence of Sound**: A seven-movement composition (~37 minutes). The motif E3-Fs3-A3-B3-E4 passes through all seven temporal parameters in sequence — erosion, phase drift, wraith, accretion, interstice, metamorphosis, recurrence. Each movement receives what the previous produced. The final return carries all six transformations. The studies were etudes; this piece speaks their language.
 - `09_contrapuntal_erosion.rb` — Contrapuntal Erosion Study No. 9: A four-voice fugue where the counterpoint progressively degrades. Not the notes (Study 1 did that) — the *relationships between voices*. Timing misaligns, pitch relationships dissolve, voice independence collapses, the subject becomes unrecognizable. Four stages: Exposition → Development → Dissolution → Stasis. The degradation IS the counterpoint.
 
+## Translation Axis (in progress)
+
+After completing the degradation axis (Studies 1-9), a new aesthetic axis began:
+**translation as form**. The same musical material is moved between contexts.
+The material is invariant; the context is the variable. The translation IS the composition.
+
+Inspired by Berio's concept of transcription as creative act (three conditions:
+identification with source, analytical experimentation, overpowering/deconstruction).
+
+- `10_translation_1.rb` — Translation Study No. 10: Idiom. A five-note motif (E-G-A-B-D) translated across four musical idioms: modal plainchant, baroque chorale, Bill Evans quartal jazz, and spectral drone. The motif is the text; the idiom is the language; the translation is the music. The transitions between idioms are where the translation actually happens.
+
 ## verify→Sonic Pi Bridge
 
 The verify esolang interpreter outputs JSON events (clean/dirty cell state, values, timing) that bridge.py converts to OSC for Sonic Pi. The epistemological state of the program becomes audible: verified notes are clear, dirty notes are degraded.
