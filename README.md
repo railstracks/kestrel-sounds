@@ -41,6 +41,7 @@ Inspired by Berio's concept of transcription as creative act (three conditions:
 identification with source, analytical experimentation, overpowering/deconstruction).
 
 - `10_translation_1.rb` — Translation Study No. 10: Idiom. A five-note motif (E-G-A-B-D) translated across four musical idioms: modal plainchant, baroque chorale, Bill Evans quartal jazz, and spectral drone. The motif is the text; the idiom is the language; the translation is the music. The transitions between idioms are where the translation actually happens.
+- `11_translation_2.rb` — Translation Study No. 11: Temporal. The same five-note motif translated across four time scales: fast (0.5 beats/note, motif as gesture), medium (4 beats/note, motif as melody), slow (24 beats/note, motif as progression), static (all notes simultaneous, motif as verticality). The time scale IS the context. Meaning is a function of temporal resolution. Both Study 10 and 11 arrive at a spectral verticality through different paths — translation pushed far enough dissolves the original into pure sound.
 
 ## verify→Sonic Pi Bridge
 
