@@ -78,7 +78,9 @@ unless code_file && File.exist?(code_file)
   exit 1
 end
 
-code = File.read(code_file)
+raw_code = File.read(code_file)
+# Strip comments to avoid Unicode/OSC decoder bug (em dashes, arrows, etc. break oscdecode.rb)
+code = raw_code.gsub(/^\s*#.*/, '').gsub(/\s+#.*$/, '')
 puts "Render: #{File.basename(code_file)}"
 puts "  Output: #{output_wav}"
 puts "  Duration: #{duration}s"
@@ -102,7 +104,7 @@ puts "  Stopping playback..."
 sleep 2
 
 # Stop recording
-Process.kill('TERM', rec_pid)
+Process.kill('INT', rec_pid)
 Process.wait(rec_pid)
 client.close
 

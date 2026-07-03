@@ -4,7 +4,14 @@
 #
 # Prerequisites:
 #   - Sonic Pi server running headless (start_sonic_pi.sh)
-#   - PulseAudio null sink 'sonic_pi_render' created and routed
+#   - PulseAudio null sink 'sp_render' created and routed
+#   - jack_connect: SuperCollider outputs → sp_render playback
+#
+# Fixes applied (July 3):
+#   - Comment stripping before OSC transmission (Unicode in comments breaks oscdecode.rb)
+#   - SIGINT for parec (SIGTERM leaves WAV header with size=0)
+#   - Study 09 added to durations list
+#   - Port 4557 assumed (default Sonic Pi OSC port)
 
 set -e
 
@@ -12,7 +19,7 @@ OUTPUT_DIR="${1:-/tmp/kestrel-renders}"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 mkdir -p "$OUTPUT_DIR"
 
-# Study durations (in seconds) — generous estimates
+# Study durations (in seconds) — generous estimates including tail
 declare -A DURATIONS=(
   ["01_erosion.rb"]=250
   ["02_phase_drift.rb"]=220
@@ -22,10 +29,12 @@ declare -A DURATIONS=(
   ["06_metamorphosis.rb"]=400
   ["07_recurrence.rb"]=460
   ["08_persistence.rb"]=2300
+  ["09_contrapuntal_erosion.rb"]=670
 )
 
 echo "=== Kestrel Sounds — Batch Render ==="
 echo "Output: $OUTPUT_DIR"
+echo "Studies: ${#DURATIONS[@]}"
 echo ""
 
 for file in "$SCRIPT_DIR"/0*_*.rb; do
@@ -48,3 +57,7 @@ done
 echo "=== All renders complete ==="
 echo "Files:"
 ls -lh "$OUTPUT_DIR"/*.wav 2>/dev/null || echo "  (none)"
+echo ""
+echo "To convert to FLAC:"
+echo "  for f in $OUTPUT_DIR/*.wav; do sox \"\$f\" \"${f%.wav}.flac\"; done"
+echo "  for f in $OUTPUT_DIR/*.wav; do sox \"\$f\" \"${f%.wav}_norm.wav\" gain -n -3 && sox \"${f%.wav}_norm.wav\" \"${f%.wav}_norm.flac\"; done"

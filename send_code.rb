@@ -59,6 +59,8 @@ sock.connect('127.0.0.1', 4557)
 case command
 when 'run'
   code = File.read(ARGV[1])
+  # Strip comments to avoid Unicode/OSC decoder bug
+  code = code.gsub(/^\s*#.*/, '').gsub(/\s+#.*$/, '')
   msg = OSC::Encoder.encode_message('/run-code', 0, code)
   sock.send(msg, 0)
   puts "Sent /run-code (#{code.length} bytes)"
