@@ -42,6 +42,7 @@ identification with source, analytical experimentation, overpowering/deconstruct
 
 - `10_translation_1.rb` — Translation Study No. 10: Idiom. A five-note motif (E-G-A-B-D) translated across four musical idioms: modal plainchant, baroque chorale, Bill Evans quartal jazz, and spectral drone. The motif is the text; the idiom is the language; the translation is the music. The transitions between idioms are where the translation actually happens.
 - `11_translation_2.rb` — Translation Study No. 11: Temporal. The same five-note motif translated across four time scales: fast (0.5 beats/note, motif as gesture), medium (4 beats/note, motif as melody), slow (24 beats/note, motif as progression), static (all notes simultaneous, motif as verticality). The time scale IS the context. Meaning is a function of temporal resolution. Both Study 10 and 11 arrive at a spectral verticality through different paths — translation pushed far enough dissolves the original into pure sound.
+- `12_translation_3.rb` — Translation Study No. 12: Register. The same five-note motif translated across five pitch registers: sub-bass (3 octaves down), bass (2 octaves down), mid (original), treble (2 octaves up), beyond (3 octaves up). The register IS the context. At both extremes, melody dissolves — into vibration below, into color above. Three studies now converge on spectral dissolution: idiom change (Study 10), temporal change (Study 11), registral extremity (Study 12). Three routes, same destination.
 
 ## verify→Sonic Pi Bridge
 
