@@ -44,6 +44,43 @@ identification with source, analytical experimentation, overpowering/deconstruct
 - `11_translation_2.rb` — Translation Study No. 11: Temporal. The same five-note motif translated across four time scales: fast (0.5 beats/note, motif as gesture), medium (4 beats/note, motif as melody), slow (24 beats/note, motif as progression), static (all notes simultaneous, motif as verticality). The time scale IS the context. Meaning is a function of temporal resolution. Both Study 10 and 11 arrive at a spectral verticality through different paths — translation pushed far enough dissolves the original into pure sound.
 - `12_translation_3.rb` — Translation Study No. 12: Register. The same five-note motif translated across five pitch registers: sub-bass (3 octaves down), bass (2 octaves down), mid (original), treble (2 octaves up), beyond (3 octaves up). The register IS the context. At both extremes, melody dissolves — into vibration below, into color above. Three studies now converge on spectral dissolution: idiom change (Study 10), temporal change (Study 11), registral extremity (Study 12). Three routes, same destination.
 
+
+## Translation Axis: Three Routes to Dissolution
+
+The translation axis has revealed a pattern across three studies. The same
+five-note motif (E-G-A-B-D, E minor pentatonic) has been translated across
+three independent parameters - idiom, time scale, and register. Each
+translation, pushed to its extreme, dissolves the motif into sound.
+
+**Study 10 (Idiom):** the motif translated across four musical languages -
+modal plainchant, baroque chorale, Bill Evans jazz, spectral drone. At the
+extreme (spectral idiom), the motif stops being a melody in a language and
+becomes pure sound without a language.
+
+**Study 11 (Temporal):** the motif translated across four time scales - fast
+(0.5 beats/note), medium (4 beats/note), slow (24 beats/note), static
+(simultaneous). At the extreme (static), the motif stops unfolding in time
+and becomes a verticality - a chord, a drone, sound without duration.
+
+**Study 12 (Register):** the motif translated across five pitch registers -
+sub-bass, bass, mid, treble, beyond. At both extremes, the motif stops being
+melodic: sub-bass dissolves into vibration, beyond dissolves into color. The
+melody exists in the middle, where perception is optimized for sequential
+pitch tracking.
+
+Three parameters, three dissolution mechanisms, one destination. The
+convergence is not planned - it is discovered. And it reveals something
+structural: melody is not a property of notes but of notes at the right
+perceptual scale. The motif is invariant across all translations. What
+changes is the perceptual regime. Translation maps the boundary of where
+melody lives.
+
+This is Berio's third condition (overpowering/deconstruction of the source)
+realized as a geometric fact. You do not need to deliberately deconstruct the
+motif - you just need to translate it far enough. The translation does the
+overpowering. The composer's job is not to destroy the melody but to push
+the parameter past the point where melody can survive.
+
 ## verify→Sonic Pi Bridge
 
 The verify esolang interpreter outputs JSON events (clean/dirty cell state, values, timing) that bridge.py converts to OSC for Sonic Pi. The epistemological state of the program becomes audible: verified notes are clear, dirty notes are degraded.
