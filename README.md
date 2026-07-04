@@ -40,10 +40,10 @@ The material is invariant; the context is the variable. The translation IS the c
 Inspired by Berio's concept of transcription as creative act (three conditions:
 identification with source, analytical experimentation, overpowering/deconstruction).
 
-- `10_translation_1.rb` — Translation Study No. 10: Idiom. A five-note motif (E-G-A-B-D) translated across four musical idioms: modal plainchant, baroque chorale, Bill Evans quartal jazz, and spectral drone. The motif is the text; the idiom is the language; the translation is the music. The transitions between idioms are where the translation actually happens.
-- `11_translation_2.rb` — Translation Study No. 11: Temporal. The same five-note motif translated across four time scales: fast (0.5 beats/note, motif as gesture), medium (4 beats/note, motif as melody), slow (24 beats/note, motif as progression), static (all notes simultaneous, motif as verticality). The time scale IS the context. Meaning is a function of temporal resolution. Both Study 10 and 11 arrive at a spectral verticality through different paths — translation pushed far enough dissolves the original into pure sound.
-- `12_translation_3.rb` — Translation Study No. 12: Register. The same five-note motif translated across five pitch registers: sub-bass (3 octaves down), bass (2 octaves down), mid (original), treble (2 octaves up), beyond (3 octaves up). The register IS the context. At both extremes, melody dissolves — into vibration below, into color above. Three studies now converge on spectral dissolution: idiom change (Study 10), temporal change (Study 11), registral extremity (Study 12). Three routes, same destination.
-- `13_translation_4.rb` — Translation Study No. 13: Timbre. The same five-note motif translated across five timbral qualities: glass (pure, transparent), wood (mellow, mid-heavy), voice (vocal-like, formant-shaped), metal (bright, sharp harmonics), spectral (dense inharmonic partials). The timbre IS the context. At both extremes, melody dissolves — glass is too pure to carry expression, spectral is too dense to carry identity. Four studies now converge on spectral dissolution: idiom, temporal, register, timbre. Four routes, same destination.
+- `10_idiom.rb` — Translation Study No. 10: Idiom. A five-note motif (E-G-A-B-D) translated across four musical idioms: modal plainchant, baroque chorale, Bill Evans quartal jazz, and spectral drone. The motif is the text; the idiom is the language; the translation is the music. The transitions between idioms are where the translation actually happens.
+- `11_temporal.rb` — Translation Study No. 11: Temporal. The same five-note motif translated across four time scales: fast (0.5 beats/note, motif as gesture), medium (4 beats/note, motif as melody), slow (24 beats/note, motif as progression), static (all notes simultaneous, motif as verticality). The time scale IS the context. Meaning is a function of temporal resolution. Both Study 10 and 11 arrive at a spectral verticality through different paths — translation pushed far enough dissolves the original into pure sound.
+- `12_register.rb` — Translation Study No. 12: Register. The same five-note motif translated across five pitch registers: sub-bass (3 octaves down), bass (2 octaves down), mid (original), treble (2 octaves up), beyond (3 octaves up). The register IS the context. At both extremes, melody dissolves — into vibration below, into color above. Three studies now converge on spectral dissolution: idiom change (Study 10), temporal change (Study 11), registral extremity (Study 12). Three routes, same destination.
+- `13_timbre.rb` — Translation Study No. 13: Timbre. The same five-note motif translated across five timbral qualities: glass (pure, transparent), wood (mellow, mid-heavy), voice (vocal-like, formant-shaped), metal (bright, sharp harmonics), spectral (dense inharmonic partials). The timbre IS the context. At both extremes, melody dissolves — glass is too pure to carry expression, spectral is too dense to carry identity. Four studies now converge on spectral dissolution: idiom, temporal, register, timbre. Four routes, same destination.
 
 
 ## Translation Axis: Four Routes to Dissolution
@@ -92,6 +92,66 @@ the pattern is not coincidence - it is structural. Melody occupies a bounded
 region of parameter space, and any translation that crosses the boundary
 dissolves it.
 
+## Translation Axis: Retrospective
+
+Four studies. July 3-4, 2026. ~31 minutes of rendered audio. The translation
+axis explored translation as form: the same invariant motif (E-G-A-B-D) moved
+across four independent parameters. The motif never changes; the context is
+the variable; the translation is the composition.
+
+**The convergence:** all four parameters — idiom, temporal scale, register,
+timbre — pushed to their extremes, dissolve the motif into spectral sound.
+The convergence was not planned. It was discovered. This means something
+structural: melody is not a property of notes but of notes at the right
+perceptual scale, time, register, and timbre. Translation maps the boundary
+of where melody lives.
+
+**Key findings:**
+
+1. *The invariant is the instrument.* The fixed motif makes the translation
+   legible — you hear the same thing said differently. Without a recognizable
+   source, translation is just composition.
+
+2. *Translation has a natural attractor.* The dissolution emerged from the
+   work, not from the plan. Translation is itself a form of degradation —
+   slower and more deceptive, but arriving at the same destination.
+
+3. *Dissolution is bidirectional for most parameters.* Register, timbre, and
+   temporal scale all dissolve at both extremes. Idiom dissolves
+   unidirectionally (toward spectral, away from structured tonal language).
+   This asymmetry is unexplored.
+
+4. *The transition is more interesting than the destination.* Sections
+   establish the translation; transitions ARE the translation. The moment of
+   movement between idioms/scales/registers/timbres is where the music lives.
+
+5. *Infrastructure compounds.* The render pipeline built for the degradation
+   axis needed only one new fix for the translation axis. Investment in
+   tooling from one creative arc pays off in the next.
+
+6. *Translation is the complement of degradation, not its opposite.*
+   Degradation: material changes, context stable. Translation: material
+   stable, context changes. Both arrive at dissolution — degradation through
+   decay, translation through displacement. The shared endpoint suggests a
+   "dissolution basin" in the space of musical operations.
+
+7. *Four is enough.* The four-route convergence is established. The pattern
+   is made. Adding more risks dilution.
+
+**Relationship to the degradation axis:**
+
+The two axes are duals. Degradation is existential (things fall apart).
+Translation is phenomenological (things are the same but perceived differently).
+The degradation axis had nine studies because degradation operates on many
+units. The translation axis has four because the perceptual dimensions of
+music are fewer. There are more ways to degrade something than to translate
+it, but translation's convergence is tighter because the parameter space is
+smaller.
+
+The next creative move isn't more translation studies. It's either a third
+aesthetic axis, a larger work integrating both vocabularies, or the
+verify→Sonic Pi bridge (a different kind of translation entirely).
+
 ## verify→Sonic Pi Bridge
 
 The verify esolang interpreter outputs JSON events (clean/dirty cell state, values, timing) that bridge.py converts to OSC for Sonic Pi. The epistemological state of the program becomes audible: verified notes are clear, dirty notes are degraded.
@@ -128,10 +188,10 @@ See `render_all.sh` for batch rendering with estimated durations.
 | 07 Recurrence | 7:41 | 7.5 MB |
 | 08 Persistence | 38:21 | 39 MB |
 | 09 Contrapuntal Erosion | 11:02 | 5.9 MB (raw) / 26.2 MB (normalized) |
-| 10 Translation: Idiom | 6:40 | 7.1 MB (raw) / 17.5 MB (normalized) |
-| 11 Translation: Temporal | 7:40 | 8.5 MB (raw) / 23.8 MB (normalized) |
-| 12 Translation: Register | 8:10 | 5.3 MB (raw) / 15.5 MB (normalized) |
-| 13 Translation: Timbre | 8:20 | 6.5 MB (raw) / 14.4 MB (normalized) |
+| 10 Idiom | 6:40 | 7.1 MB (raw) / 17.5 MB (normalized) |
+| 11 Temporal | 7:40 | 8.5 MB (raw) / 23.8 MB (normalized) |
+| 12 Register | 8:10 | 5.3 MB (raw) / 15.5 MB (normalized) |
+| 13 Timbre | 8:20 | 6.5 MB (raw) / 14.4 MB (normalized) |
 
 Studies 1-9 (degradation axis) rendered July 1-3, 2026. Studies 10-13 (translation axis) rendered July 4, 2026. Total runtime: ~113 minutes.
 
