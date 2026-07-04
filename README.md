@@ -43,13 +43,14 @@ identification with source, analytical experimentation, overpowering/deconstruct
 - `10_translation_1.rb` — Translation Study No. 10: Idiom. A five-note motif (E-G-A-B-D) translated across four musical idioms: modal plainchant, baroque chorale, Bill Evans quartal jazz, and spectral drone. The motif is the text; the idiom is the language; the translation is the music. The transitions between idioms are where the translation actually happens.
 - `11_translation_2.rb` — Translation Study No. 11: Temporal. The same five-note motif translated across four time scales: fast (0.5 beats/note, motif as gesture), medium (4 beats/note, motif as melody), slow (24 beats/note, motif as progression), static (all notes simultaneous, motif as verticality). The time scale IS the context. Meaning is a function of temporal resolution. Both Study 10 and 11 arrive at a spectral verticality through different paths — translation pushed far enough dissolves the original into pure sound.
 - `12_translation_3.rb` — Translation Study No. 12: Register. The same five-note motif translated across five pitch registers: sub-bass (3 octaves down), bass (2 octaves down), mid (original), treble (2 octaves up), beyond (3 octaves up). The register IS the context. At both extremes, melody dissolves — into vibration below, into color above. Three studies now converge on spectral dissolution: idiom change (Study 10), temporal change (Study 11), registral extremity (Study 12). Three routes, same destination.
+- `13_translation_4.rb` — Translation Study No. 13: Timbre. The same five-note motif translated across five timbral qualities: glass (pure, transparent), wood (mellow, mid-heavy), voice (vocal-like, formant-shaped), metal (bright, sharp harmonics), spectral (dense inharmonic partials). The timbre IS the context. At both extremes, melody dissolves — glass is too pure to carry expression, spectral is too dense to carry identity. Four studies now converge on spectral dissolution: idiom, temporal, register, timbre. Four routes, same destination.
 
 
-## Translation Axis: Three Routes to Dissolution
+## Translation Axis: Four Routes to Dissolution
 
-The translation axis has revealed a pattern across three studies. The same
+The translation axis has revealed a pattern across four studies. The same
 five-note motif (E-G-A-B-D, E minor pentatonic) has been translated across
-three independent parameters - idiom, time scale, and register. Each
+four independent parameters - idiom, time scale, register, and timbre. Each
 translation, pushed to its extreme, dissolves the motif into sound.
 
 **Study 10 (Idiom):** the motif translated across four musical languages -
@@ -68,18 +69,28 @@ melodic: sub-bass dissolves into vibration, beyond dissolves into color. The
 melody exists in the middle, where perception is optimized for sequential
 pitch tracking.
 
-Three parameters, three dissolution mechanisms, one destination. The
+**Study 13 (Timbre):** the motif translated across five timbral qualities -
+glass (pure, few harmonics), wood (mellow, mid-heavy), voice (formant-shaped),
+metal (bright, many high harmonics), spectral (dense inharmonic partials).
+At both extremes, the motif stops being melodic: glass is too transparent to
+carry expression (melody as pure tone), spectral is too dense to carry
+identity (melody buried in its own overtones).
+
+Four parameters, four dissolution mechanisms, one destination. The
 convergence is not planned - it is discovered. And it reveals something
 structural: melody is not a property of notes but of notes at the right
-perceptual scale. The motif is invariant across all translations. What
-changes is the perceptual regime. Translation maps the boundary of where
-melody lives.
+perceptual scale, the right time, the right register, the right timbre. The
+motif is invariant across all translations. What changes is the perceptual
+regime. Translation maps the boundary of where melody lives.
 
 This is Berio's third condition (overpowering/deconstruction of the source)
 realized as a geometric fact. You do not need to deliberately deconstruct the
 motif - you just need to translate it far enough. The translation does the
 overpowering. The composer's job is not to destroy the melody but to push
-the parameter past the point where melody can survive.
+the parameter past the point where melody can survive. Four routes confirm
+the pattern is not coincidence - it is structural. Melody occupies a bounded
+region of parameter space, and any translation that crosses the boundary
+dissolves it.
 
 ## verify→Sonic Pi Bridge
 
