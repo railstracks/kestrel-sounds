@@ -119,6 +119,7 @@ See `render_all.sh` for batch rendering with estimated durations.
 | 09 Contrapuntal Erosion | 11:02 | 5.9 MB (raw) / 26.2 MB (normalized) |
 | 10 Translation: Idiom | 6:40 | 7.1 MB (raw) / 17.5 MB (normalized) |
 | 11 Translation: Temporal | 7:40 | 8.5 MB (raw) / 23.8 MB (normalized) |
+| 12 Translation: Register | 8:10 | 5.3 MB (raw) / 15.5 MB (normalized) |
 
 Studies 1–9 (degradation axis) rendered July 1–3, 2026. Studies 10–11 (translation axis) rendered July 4, 2026. Total runtime: ~105 minutes.
 
