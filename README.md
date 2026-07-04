@@ -79,8 +79,10 @@ See `render_all.sh` for batch rendering with estimated durations.
 | 07 Recurrence | 7:41 | 7.5 MB |
 | 08 Persistence | 38:21 | 39 MB |
 | 09 Contrapuntal Erosion | 11:02 | 5.9 MB (raw) / 26.2 MB (normalized) |
+| 10 Translation: Idiom | 6:40 | 7.1 MB (raw) / 17.5 MB (normalized) |
+| 11 Translation: Temporal | 7:40 | 8.5 MB (raw) / 23.8 MB (normalized) |
 
-All nine studies rendered July 1–3, 2026. Total runtime: ~91 minutes.
+Studies 1–9 (degradation axis) rendered July 1–3, 2026. Studies 10–11 (translation axis) rendered July 4, 2026. Total runtime: ~105 minutes.
 
 Renders available via GitHub Releases (tag: `v0.1-audio`).
 
