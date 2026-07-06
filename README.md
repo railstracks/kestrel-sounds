@@ -152,6 +152,49 @@ The next creative move isn't more translation studies. It's either a third
 aesthetic axis, a larger work integrating both vocabularies, or the
 verify→Sonic Pi bridge (a different kind of translation entirely).
 
+## Interaction Axis (in progress)
+
+After completing the translation axis, a third aesthetic axis began:
+**interaction as form**. Two motifs encounter each other and transform
+through the encounter. The form is the interaction itself. The motif is no
+longer alone — the form is relational.
+
+- Degradation: one motif, changed by time
+- Translation: one motif, changed by context
+- Interaction: two motifs, changed by each other
+
+The same two five-note motifs appear in every interaction study:
+  Motif A: E3 - G3 - A3 - B3 - D4  (E minor pentatonic)
+  Motif B: F3 - A3 - B3 - C4 - E4  (F major pentatonic)
+Near-neighbors. Share A3 and B3. Differ on 3 notes (minor 2nd clashes on E/F and D/E).
+
+- `14_interaction.rb` — Interaction Study No. 14: Exchange. Cooperative note
+  trading. Five rounds, each swapping one note between motifs. Dust enters
+  as identity dissolves. Fusion section: hybrid melody on ember + glass upper
+  partials. Recall: motifs separate but altered, carrying traces of each other.
+  Cross-contamination in the recall — motifs absorbed each other's voice
+  characteristics, not just notes. 142.7s. Max amp 0.656.
+- `15_competition.rb` — Interaction Study No. 15: Competition. Antagonistic
+  clash. Mismatched phase (A at 4 beats/note, B at 3 beats/note) creates
+  friction. Escalation: both accelerate, louden, pulse enters as structural
+  reinforcement, dust accumulates as collision debris. Dominance: A overwhelms
+  B; B retreats upward and fragments. Aftermath: A alone, broken, stuttering;
+  B ghosts at the edge of hearing; dust settles over the wreckage. 131.1s.
+  Max amp 0.999969 — the aggression is audible.
+
+### Interaction Axis: Two Modes of Dissolution
+
+The two interaction studies both dissolve, but the QUALITY differs:
+- Exchange dissolves softly — dust settling after fusion, motifs gently
+  cross-contaminated, hybrid melody that can't hold together
+- Competition dissolves harshly — fragments after battle, the winner is
+  broken, the loser is a ghost, dust settles over wreckage
+
+Both arrive at the same destination (dissolution) as the degradation and
+translation axes. This suggests the dissolution basin is a general
+attractor — relational processes also fall into it. But the path matters:
+cooperation and antagonism are different trajectories through the same basin.
+
 ## verify→Sonic Pi Bridge
 
 The verify esolang interpreter outputs JSON events (clean/dirty cell state, values, timing) that bridge.py converts to OSC for Sonic Pi. The epistemological state of the program becomes audible: verified notes are clear, dirty notes are degraded.
@@ -192,8 +235,10 @@ See `render_all.sh` for batch rendering with estimated durations.
 | 11 Temporal | 7:40 | 8.5 MB (raw) / 23.8 MB (normalized) |
 | 12 Register | 8:10 | 5.3 MB (raw) / 15.5 MB (normalized) |
 | 13 Timbre | 8:20 | 6.5 MB (raw) / 14.4 MB (normalized) |
+| 14 Interaction | 2:22 | 3.3 MB |
+| 15 Competition | 2:11 | 3.6 MB |
 
-Studies 1-9 (degradation axis) rendered July 1-3, 2026. Studies 10-13 (translation axis) rendered July 4, 2026. Total runtime: ~113 minutes.
+Studies 1-9 (degradation axis) rendered July 1-3, 2026. Studies 10-13 (translation axis) rendered July 4, 2026. Studies 14-15 (interaction axis) rendered July 6-7, 2026. Total runtime: ~118 minutes.
 
 Renders available via GitHub Releases (tag: `v0.1-audio`).
 
