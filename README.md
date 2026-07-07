@@ -152,7 +152,7 @@ The next creative move isn't more translation studies. It's either a third
 aesthetic axis, a larger work integrating both vocabularies, or the
 verify→Sonic Pi bridge (a different kind of translation entirely).
 
-## Interaction Axis (in progress)
+## Interaction Axis (complete)
 
 After completing the translation axis, a third aesthetic axis began:
 **interaction as form**. Two motifs encounter each other and transform
@@ -220,6 +220,125 @@ through the same basin, each with its own emotional character.
 - Competition: RMS 0.073 (loud)
 - Imitation: RMS 0.034 (quiet — the quietest interaction study. Imitation
   is the mode that least wants to be heard.)
+
+## Interaction Axis: Retrospective
+
+Three studies. July 6-7, 2026. ~8 minutes of rendered audio. The interaction
+axis explored interaction as form: two motifs encounter each other and
+transform through the encounter. The motifs change each other; the relation
+is the variable; the interaction is the composition.
+
+The same two five-note motifs appear in all three studies: E minor pentatonic
+(Motif A) and F major pentatonic (Motif B). Near-neighbors that share two
+notes (A3, B3) and clash on three (minor 2nds on E/F and D/E). This
+structural relationship — close enough to interact, different enough to
+clash — is the invariant across the axis. What varies is the *mode* of
+interaction: cooperation, antagonism, desire.
+
+**The convergence:** all three modes arrive at dissolution, like the
+degradation and translation axes before. But the quality of dissolution
+differs dramatically by mode. This is the axis's central finding: the
+dissolution basin has multiple trajectories, and the trajectory is
+emotionally specific. The *path* through the basin is the composition.
+
+**Key findings:**
+
+1. *Three is enough.* The degradation axis needed nine studies because
+degradation operates on many units (pitch, timing, amplitude, timbre,
+counterpoint, etc.). The translation axis needed four because the
+perceptual dimensions of music are fewer. The interaction axis needed
+only three because the modes of relation are fundamental: you can
+cooperate, conflict, or desire. Three modes, three emotional registers,
+three trajectories. Adding more would decorate the axis, not extend it.
+
+2. *The emotional signature is physically measurable.* Exchange: max amp
+0.656, RMS 0.048 — gentle and present. Competition: max amp 0.999969, RMS
+0.073 — violent and loud. Imitation: max amp 0.648, RMS 0.034 — gentle
+and quiet. The amplitude and RMS values are not metaphors; they are the
+acoustic trace of the relational mode. The aggression in Competition is
+literally louder. The sadness of Imitation is literally quieter. And
+Imitation's amplitude envelope declines monotonically (0.648 to 0.027
+across 15s windows) — the fading is the piece.
+
+3. *Voice migration encodes relation.* In Exchange, motifs swap notes but
+keep their voices — identity is musical, not timbral. In Competition,
+the winner's voice deforms (detune rises 8 to 45, noise_mix 0.04 to
+0.40) — dominance costs the dominator. In Imitation, both motifs migrate
+to a shared voice (ember) that is neither one nor the other — the
+convergence point is a new timbre that belongs to no one. Voice is where
+the relation is inscribed.
+
+4. *The winner loses.* Competition's most surprising structural finding:
+the winner (Motif A) is more damaged than the loser (Motif B). A ends
+stuttering, detuned to 45, noise-dominated. B returns as a glass ghost —
+peaceful, high, barely audible. The reversal of expectations is not
+commentary; it's structural. Dominance is self-destructive. The mode of
+conflict deforms the victor more than the vanquished.
+
+5. *Imitation is the saddest mode.* Exchange is bittersweet (motifs
+cross-contaminated, carrying traces). Competition is tragic (winner
+broken, loser ghosted). Imitation is sad — both succeed at becoming each
+other, and there is nothing left. The convergence voice degrades. Neither
+knows who it was. The sadness is not in the failure to imitate but in the
+success. Complete imitation is indistinguishable from loss.
+
+6. *Dust accumulates as relational debris.* In all three studies, the
+kestrel_dust voice enters as the interaction intensifies. In Exchange,
+it settles after fusion — the quiet after combination. In Competition,
+it accumulates during escalation — the acoustic evidence of collision.
+In Imitation, it dominates the final section — the residue of two
+identities that wore each other away. Dust is the material trace of
+relational cost.
+
+7. *The interaction axis is the most narrative.* The degradation axis is
+process-driven (things fall apart). The translation axis is
+phenomenological (things are the same but perceived differently). The
+interaction axis is dramatic: two agents encounter each other, the
+encounter transforms both, the transformation is irreversible. The
+structure maps to narrative — setup, escalation, resolution — and the
+emotional register is correspondingly stronger. This is not a flaw. The
+axes together cover three modes of musical temporality: process,
+perception, and drama.
+
+**Relationship to the degradation and translation axes:**
+
+The three axes form a triad:
+- Degradation: existential. One motif, changed by time. The motif falls
+  apart.
+- Translation: phenomenological. One motif, changed by context. The motif
+  is the same but perceived differently.
+- Interaction: relational. Two motifs, changed by each other. The motifs
+  transform through encounter.
+
+All three arrive at the same destination: spectral dissolution. The
+dissolution basin is a general attractor across existential, phenomenological,
+and relational processes. But the paths differ:
+- Degradation: dissolution through decay. The material is spent.
+- Translation: dissolution through displacement. The material is displaced
+  beyond the boundary of perception.
+- Interaction: dissolution through encounter. The material is transformed
+  by the presence of another.
+
+The axes are not a progression but a tripartition. Three independent routes
+to the same basin, each illuminating a different face of the same fact:
+music is the sound of things dissolving, and the art is in how they dissolve.
+
+**The meta-pattern: three axes, sixteen studies, one basin.**
+
+Across 16 studies and ~121 minutes of rendered audio, the consistent finding
+is dissolution. This is not pessimism. It's structural: every parametric
+process, pushed far enough, dissolves the material it operates on. The
+composer's art is not to prevent dissolution but to shape the path through
+it. The studies are not about endings. They are about trajectories — the
+specific, irreplaceable character of how something falls apart, gets lost,
+or becomes something else.
+
+The next move is not a fourth axis. Three axes cover the space: existential,
+phenomenological, relational. A fourth would either repeat one of these
+or escape the framework entirely. The next move is integration: a larger
+work that uses the vocabulary of all three axes, or a different kind of
+translation entirely (the verify→Sonic Pi bridge, where the material is
+not musical but epistemological).
 
 ## verify→Sonic Pi Bridge
 
