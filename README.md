@@ -181,19 +181,45 @@ Near-neighbors. Share A3 and B3. Differ on 3 notes (minor 2nd clashes on E/F and
   B; B retreats upward and fragments. Aftermath: A alone, broken, stuttering;
   B ghosts at the edge of hearing; dust settles over the wreckage. 131.1s.
   Max amp 0.999969 — the aggression is audible.
+- `16_imitation.rb` — Interaction Study No. 16: Imitation. Both motifs try
+  to copy each other, and the act of imitation erodes both identities. The
+  relation is desire, not trade or conflict. Proposal: each motif plays itself
+  then attempts the other's notes (wrong voice, hesitant). Reciprocity:
+  simultaneous imitation, note-by-note convergence over 4 rounds, pan
+  migrating to center. Convergence: both on ember, same notes, same rhythm —
+  the moment of complete imitation. Loss: the shared voice degrades (detune
+  rises 12→32, warmth fades 0.3→0.01), dust dominates, neither knows who it
+  was. 189.1s. Max amp 0.648 — the quietest interaction study.
 
-### Interaction Axis: Two Modes of Dissolution
+### Interaction Axis: Three Modes of Dissolution
 
-The two interaction studies both dissolve, but the QUALITY differs:
+The three interaction studies all dissolve, but the QUALITY differs:
 - Exchange dissolves softly — dust settling after fusion, motifs gently
   cross-contaminated, hybrid melody that can't hold together
 - Competition dissolves harshly — fragments after battle, the winner is
   broken, the loser is a ghost, dust settles over wreckage
+- Imitation dissolves sadly — both succeeded at becoming each other, and
+  there is nothing left. The voice they converged on degrades. Neither
+  knows who it was.
 
-Both arrive at the same destination (dissolution) as the degradation and
-translation axes. This suggests the dissolution basin is a general
+All three arrive at the same destination (dissolution) as the degradation and
+translation axes. This confirms the dissolution basin is a general
 attractor — relational processes also fall into it. But the path matters:
-cooperation and antagonism are different trajectories through the same basin.
+cooperation, antagonism, and imitation are three different trajectories
+through the same basin, each with its own emotional character.
+
+**Amplitude as emotional signature:**
+- Exchange: max amp 0.656 (gentle)
+- Competition: max amp 0.999969 (violent)
+- Imitation: max amp 0.648 (gentle, but declining — the amplitude envelope
+  itself tells the story: 0.648 → 0.027, a gradual fading that mirrors the
+  loss of identity)
+
+**RMS as presence:**
+- Exchange: RMS 0.048 (present)
+- Competition: RMS 0.073 (loud)
+- Imitation: RMS 0.034 (quiet — the quietest interaction study. Imitation
+  is the mode that least wants to be heard.)
 
 ## verify→Sonic Pi Bridge
 
@@ -237,8 +263,9 @@ See `render_all.sh` for batch rendering with estimated durations.
 | 13 Timbre | 8:20 | 6.5 MB (raw) / 14.4 MB (normalized) |
 | 14 Interaction | 2:22 | 3.3 MB |
 | 15 Competition | 2:11 | 3.6 MB |
+| 16 Imitation | 3:09 | 3.5 MB (raw) / 5.3 MB (normalized) |
 
-Studies 1-9 (degradation axis) rendered July 1-3, 2026. Studies 10-13 (translation axis) rendered July 4, 2026. Studies 14-15 (interaction axis) rendered July 6-7, 2026. Total runtime: ~118 minutes.
+Studies 1-9 (degradation axis) rendered July 1-3, 2026. Studies 10-13 (translation axis) rendered July 4, 2026. Studies 14-16 (interaction axis) rendered July 6-7, 2026. Total runtime: ~121 minutes.
 
 Renders available via GitHub Releases (tag: `v0.1-audio`).
 
