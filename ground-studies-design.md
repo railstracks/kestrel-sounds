@@ -59,7 +59,49 @@ The EurekAgent connection: the first three are workflow design (changing what th
 3. If the pattern holds, design 2-3 more ground studies (different ground parameters)
 4. Write retrospective connecting ground dissolution to the three figure-level axes
 
+## Study 17: Ground Shift (Tuning Ground) — COMPLETE
+
+Rendered July 8. Same motif across 12-EDO → 17-EDO → 7-EDO → continuous
+detuning. Dissolution basin confirmed at ground level: Section IV amplitude
+declines monotonically from 0.449 to 0.014. Per-section rendering required
+(scsynth voice accumulation). 120.7s, GitHub release study-17.
+
+## Study 18: Space Dissolution (Resonance Ground) — COMPOSED
+
+Second ground parameter: the acoustic/resonance space. The motif's pitches
+stay invariant (always 12-EDO, always E-G-A-B-D). What dissolves is the
+space: release time, cutoff, noise floor, stereo position.
+
+Four sections:
+- I. Intimate — short release (1.5s), bright cutoff (88), low noise (0.02),
+  centered pan. A small, dry room.
+- II. Room — medium release (2.0s), medium cutoff (80), slight noise (0.04),
+  slight pan. The space has body.
+- III. Cathedral — long release (3.0s), dark cutoff (72), noticeable noise
+  (0.08-0.10), wide pan (±0.20). The space dominates.
+- IV. Dissolution — erratic release (0.8-6.0s), fluctuating cutoff (50-92),
+  high noise (0.12-0.30), erratic pan (±0.80). Each note exists in its own
+  random space. The concept of "room" dissolves.
+
+Key distinction from degradation axis: the motif's pitches are ALWAYS correct.
+What dissolves is the resonance environment, not the material.
+Key distinction from Study 17: pitch ground is stable, resonance ground dissolves.
+
+No with_fx (headless constraint). Space encoded entirely through synth
+parameters: release, cutoff, noise_mix, pan. Post-processing reverb not
+used — the "space" is internal to the synth voice.
+
+## Ground parameters explored
+
+1. Tuning/pitch ground (Study 17) — the pitch space shifts underneath
+2. Resonance/space ground (Study 18) — the acoustic space shatters
+
+## Next ground parameters (future studies)
+
+3. Temporal ground — the beat/grid itself becomes unstable
+4. Dynamic/range ground — the available loudness range compresses to zero
+5. Noise floor — the signal-to-noise ratio dissolves (noise overwhelms signal)
+
 ## Next session
-- Check Sonic Pi 3.2.3's hertz-based play capabilities
-- Write the first ground study
-- Test with Sonic Pi headless render pipeline
+- Render Study 18 (per-section rendering recommended)
+- If dissolution basin holds, design Study 19 (temporal ground)
