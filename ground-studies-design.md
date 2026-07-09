@@ -122,7 +122,40 @@ Render: 191.3s, max amp 0.797, RMS 0.077. GitHub release study-19.
 2. Resonance/space ground (Study 18) — the acoustic space shatters
 3. Temporal ground (Study 19) — the beat/grid becomes incoherent
 
-## Next ground parameters (future studies)
+## Study 20: Dynamic/Range Ground (Dynamic Ground) — COMPLETE
 
-4. Dynamic/range ground — the available loudness range compresses to zero
+Rendered July 9. Same motif with constant pitches, synth, space, and
+timing. What dissolves is the dynamic range — the contrast between loud
+and quiet notes. The motif has a dynamic contour (peak notes loudest,
+middle notes quietest) that is part of its identity.
+
+Four sections:
+- I. Full Range (0-28s): wide dynamic contrast (0.12-0.55). max=0.617, RMS=0.099
+- II. Compressed (28-57s): reduced contrast (0.24-0.42). max=0.472, RMS=0.096
+- III. Flat (57-85s): all notes at 0.30. No contrast. max=0.351, RMS=0.088
+- IV. Dissolution (85-113s): random dynamics then near-silence. max=0.506, RMS=0.058
+- Coda (113-181s): dust at root. max=0.027, RMS=0.004
+
+Dissolution signature: amplitude VARIANCE is the key metric (not max
+amplitude or RMS). Variance: 0.0217 -> 0.0036 -> 0.0000 -> 0.0250.
+The path to silence goes THROUGH flatness. The motif doesn't fade — it
+flattens (variance -> 0), then the flat line drops to zero (mean -> 0).
+Section IV has a variance spike (random dynamics = dynamic incoherence)
+before the collapse. This is different from all three previous ground
+studies: pitch dissolution was gradual, space dissolution was textural,
+temporal dissolution was structural (density). Dynamic dissolution is
+dimensional — it collapses a dimension of variation rather than changing
+the substance.
+
+Render: 181.3s, max amp 0.617, RMS 0.069. GitHub release study-20.
+
+## Ground parameters explored
+
+1. Tuning/pitch ground (Study 17) — the pitch space shifts underneath
+2. Resonance/space ground (Study 18) — the acoustic space shatters
+3. Temporal ground (Study 19) — the beat/grid becomes incoherent
+4. Dynamic ground (Study 20) — the loudness range collapses to zero
+
+## Next ground parameter (future study)
+
 5. Noise floor — the signal-to-noise ratio dissolves (noise overwhelms signal)
