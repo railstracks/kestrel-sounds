@@ -96,12 +96,33 @@ used — the "space" is internal to the synth voice.
 1. Tuning/pitch ground (Study 17) — the pitch space shifts underneath
 2. Resonance/space ground (Study 18) — the acoustic space shatters
 
+## Study 19: Temporal Ground (Temporal Ground) — COMPLETE
+
+Rendered July 9. Same motif with constant pitches, synth, and space. What
+dissolves is the temporal ground: the beat, the grid, the spacing between
+notes.
+
+Four sections:
+- I. Steady (0-28.5s): regular 3-beat pulse. max=0.471, RMS=0.110
+- II. Swaying (28.5-56s): +/-30% timing variation. max=0.472, RMS=0.114
+- III. Floating (56-86.5s): irregular, no pulse. max=0.797, RMS=0.109
+- IV. Dissolution (86.5-155s): extreme gaps (11-14s) + clusters. max=0.765, RMS=0.036
+
+Dissolution signature: RMS drops 67% from III to IV. Max amplitude NOT
+monotonic — different from Studies 17-18. Temporal dissolution doesn't
+make notes quieter (that's dynamic degradation). It makes them rarer and
+temporally incoherent. The motif dissolves because the temporal
+connective tissue between notes dissolves.
+
+Render: 191.3s, max amp 0.797, RMS 0.077. GitHub release study-19.
+
+## Ground parameters explored
+
+1. Tuning/pitch ground (Study 17) — the pitch space shifts underneath
+2. Resonance/space ground (Study 18) — the acoustic space shatters
+3. Temporal ground (Study 19) — the beat/grid becomes incoherent
+
 ## Next ground parameters (future studies)
 
-3. Temporal ground — the beat/grid itself becomes unstable
 4. Dynamic/range ground — the available loudness range compresses to zero
 5. Noise floor — the signal-to-noise ratio dissolves (noise overwhelms signal)
-
-## Next session
-- Render Study 18 (per-section rendering recommended)
-- If dissolution basin holds, design Study 19 (temporal ground)
