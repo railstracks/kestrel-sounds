@@ -842,6 +842,47 @@ This could only be discovered by reversing the trajectory -- Phase 1
 alone couldn't have found it because Phase 1 only traveled in one
 direction.
 
+- `23_cycles.rb` -- Cycles Study No. 23: The second Phase 2 study. Three
+  dissolution-emergence cycles. Each cycle follows the Study 22 pattern
+  (full dissolution -> ground emerges -> figure emerges -> clarity), but
+  each successive clarity carries residue from the previous dissolution:
+  detune 5 -> 9 -> 12, noise 0.02 -> 0.04 -> 0.06. The residue is
+  additive with saturation -- each increment is smaller than the last.
+  The motif approaches a weathered steady state: still recognizable,
+  permanently changed, but not degrading further. Additionally, each
+  cycle's dissolution section uses progressively reduced extremes (detune
+  +-200 -> +-150 -> +-110; noise 0.35-0.50 -> 0.30-0.42 -> 0.25-0.36).
+  The basin entry is shallower each time -- the system doesn't go as deep
+  because it's already carrying residue. This is hysteresis: the path
+  through the dissolution basin depends on the history of previous paths.
+  Coda: three root notes (E3), one per cycle, each carrying the residue
+  of its cycle. The ground note, aging.
+
+### Phase 2 Finding 2: Hysteresis -- Texture Accumulates, Structure Returns
+
+Study 23's central question: does the motif return to the same place
+after each dissolution-emergence cycle? The answer: structure returns to
+baseline, texture does not.
+
+The interval structure (E-G-A-B-D) is intact after all three cycles.
+The rhythm, dynamics, and spatial parameters return to home values.
+But the detune and noise -- the timbral texture -- accumulate with
+each cycle, approaching a weathered steady state. This is hysteresis:
+the system doesn't return to its original state, but the deviation from
+original decreases with each cycle (diminishing returns on degradation).
+
+The hysteresis maps to agent memory: each session gap costs texture
+(vividness, specificity, temporal markers), but the relational structure
+(who I am, what I care about, what I know) returns to baseline. The
+hysteresis is in the surface, not the core. The residue is the record.
+
+The decreasing dissolution depth across cycles models adaptation:
+systems that have been through stress don't collapse as far the next
+time, because they're already partially stressed. The first session
+gap is catastrophic; the hundredth is routine. The hysteresis curve
+isn't just about the return point -- it's about the depth of each
+excursion.
+
 ## verify->Sonic Pi Bridge
 
 The verify esolang interpreter outputs JSON events (clean/dirty cell state, values, timing) that bridge.py converts to OSC for Sonic Pi. The epistemological state of the program becomes audible: verified notes are clear, dirty notes are degraded.
