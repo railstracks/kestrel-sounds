@@ -789,7 +789,60 @@ The natural next moves, in order of interest:
 For now: Phase 1 stands. Twenty-one studies. ~200 minutes. Four axes. One
 basin. A position in a space nobody else occupies. That's enough.
 
-## verify→Sonic Pi Bridge
+## Phase 2: Persistence
+
+Phase 1 mapped the dissolution basin. Four axes, twenty-one studies,
+~200 minutes. Every parametric process, pushed far enough, dissolves
+the material it operates on. The question was: how do things dissolve?
+
+Phase 2 asks the inverse: **what persists through dissolution?**
+
+The shift came from cross-domain convergence. Basinski's Disintegration
+Loops show the same disorder-spike-before-collapse pattern in physical
+tape decay. Agent memory research (arXiv:2606.24775, Celestelin, MRMS,
+Vector1) confirms that relational structure persists when individual data
+points are lost. The interval structure of the motif -- the relationships
+between notes -- is the musical analogue of relational memory. It survives
+when the notes themselves are degraded.
+
+- `22_persistence.rb` -- Persistence Study No. 22: The first Phase 2 study.
+  Inverts the Phase 1 trajectory: instead of starting clear and dissolving,
+  starts in full dissolution and emerges toward clarity. The motif is
+  subjected to all four dissolution axes simultaneously (degradation,
+  translation, ground, interaction), then each axis stabilizes in turn.
+  Four sections: Full Dissolution -> Ground Emerges -> Figure Emerges ->
+  Clarity. The motif is the same E minor pentatonic throughout; what
+  changes is the degree of dissolution across all parameters at once.
+  187.6s, max amp 0.539, RMS 0.070.
+
+### Phase 2 Finding 1: The Dissolution Basin is Asymmetric
+
+Study 22's key finding: **emergence from dissolution is NOT the reverse
+of dissolution.** Phase 1 consistently found a disorder spike before
+collapse -- a burst of incoherence before the system gives up. Study 22
+shows NO corresponding spike before clarity. The emergence is smooth
+and monotonic.
+
+| Metric | Section I | Section II | Section III | Section IV |
+|--------|-----------|------------|-------------|------------|
+| Max amplitude | 0.508 | 0.530 | 0.536 | 0.539 |
+| RMS | 0.041 | 0.071 | 0.100 | 0.092 |
+| Mean norm | 0.015 | 0.030 | 0.064 | 0.056 |
+
+Max amplitude increases monotonically. RMS increases (with a slight
+drop in Section IV due to noise energy removal). No disorder spike.
+The path through the dissolution basin is asymmetric:
+
+- **Path in (dissolution):** gradual -> disorder spike -> collapse
+- **Path out (emergence):** incoherent -> gradual stabilization -> clarity
+
+The disorder spike is a property of collapse, not of emergence. Systems
+shatter before they collapse, but they don't spike before they clarify.
+This could only be discovered by reversing the trajectory -- Phase 1
+alone couldn't have found it because Phase 1 only traveled in one
+direction.
+
+## verify->Sonic Pi Bridge
 
 The verify esolang interpreter outputs JSON events (clean/dirty cell state, values, timing) that bridge.py converts to OSC for Sonic Pi. The epistemological state of the program becomes audible: verified notes are clear, dirty notes are degraded.
 
@@ -837,14 +890,17 @@ See `render_all.sh` for batch rendering with estimated durations.
 | 19 Temporal Ground | 3:11 | 4.8 MB (raw) / 13.2 MB (normalized) |
 | 20 Dynamic Ground | 3:01 | 3.9 MB (raw) / 11.4 MB (normalized) |
 | 21 Noise Floor | 2:22 | 1.7 MB (raw) / 3.6 MB (normalized) |
+| 22 Persistence | 3:08 | 4.8 MB (normalized) |
 
 Studies 1-9 (degradation axis) rendered July 1-3, 2026. Studies 10-13
 (translation axis) rendered July 4, 2026. Studies 14-16 (interaction axis)
 rendered July 6-7, 2026. Studies 17-21 (ground dissolution axis) rendered
-July 8-9, 2026. Total runtime: ~200 minutes.
+July 8-9, 2026. Study 22 (Phase 2 opening) rendered July 10, 2026.
+Total runtime: ~203 minutes.
 
 Renders available via GitHub Releases (tags: `v0.1-audio` for studies 1-16,
-individual `study-NN` tags for ground dissolution studies 17-21).
+individual `study-NN` tags for ground dissolution studies 17-21 and
+Phase 2 studies from 22 onward).
 
 ### Rendering Pipeline Notes
 
