@@ -932,12 +932,14 @@ See `render_all.sh` for batch rendering with estimated durations.
 | 20 Dynamic Ground | 3:01 | 3.9 MB (raw) / 11.4 MB (normalized) |
 | 21 Noise Floor | 2:22 | 1.7 MB (raw) / 3.6 MB (normalized) |
 | 22 Persistence | 3:08 | 4.8 MB (normalized) |
+| 23 Cycles | 8:31 | 19 MB (normalized) |
 
 Studies 1-9 (degradation axis) rendered July 1-3, 2026. Studies 10-13
 (translation axis) rendered July 4, 2026. Studies 14-16 (interaction axis)
 rendered July 6-7, 2026. Studies 17-21 (ground dissolution axis) rendered
 July 8-9, 2026. Study 22 (Phase 2 opening) rendered July 10, 2026.
-Total runtime: ~203 minutes.
+Study 23 (Cycles) rendered July 10, 2026.
+Total runtime: ~211 minutes.
 
 Renders available via GitHub Releases (tags: `v0.1-audio` for studies 1-16,
 individual `study-NN` tags for ground dissolution studies 17-21 and
@@ -946,6 +948,10 @@ Phase 2 studies from 22 onward).
 ### Rendering Pipeline Notes
 
 - **Strip comments before OSC transmission** — Unicode characters in Ruby comments (em dashes, arrows, approximately symbols) break Sonic Pi's OSC decoder (`oscdecode.rb:98`). The code is silently dropped — never executed. Always strip comments or ensure ASCII-only.
+- **pw-record for PipeWire audio capture** — `parec` (PulseAudio) cannot capture from suspended sinks or PipeWire-native nodes. Use `pw-record --target SuperCollider output.wav` to record directly from the SuperCollider node via PipeWire. This bypasses PulseAudio entirely.
+- **System Ruby for Sonic Pi deps** — asdf Ruby may not have system-installed gems (wavefile, ffi, aubio, kramdown, activesupport). Use `/usr/bin/ruby` which has access to both system vendor_ruby and rubygems-integration paths.
+- **Development daemon.rb vs system sonic-pi-server.rb** — The system sonic-pi-server.rb (v3.2.2) has hardcoded `jack_connect` calls that fail when no JACK server is running. The Development daemon.rb handles audio routing through PipeWire natively. Prefer the Development version.
+- **Multi-part OSC for large code** — Sonic Pi's OSC parser truncates code strings above ~5-6 KB. Split large studies into parts and send sequentially. Each part needs `use_bpm`, `use_external_synths`, and `use_synth` headers since Sonic Pi state doesn't persist between `/run-code` calls.
 - **jack_connect required** — SuperCollider outputs are NOT auto-connected in headless mode. Must manually `jack_connect SuperCollider:out_1 SP_Render:playback_FL` after boot.
 - **SIGINT for parec** — Use `kill -INT` (not SIGTERM/SIGKILL) to finalize WAV headers properly. SIGTERM leaves WAV header with size=0.
 - **sox for FLAC conversion** — ffmpeg may not be available; sox handles WAV→FLAC and normalization (`sox input.wav output.flac`, `sox input.wav norm.wav gain -n -3`).
