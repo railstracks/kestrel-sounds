@@ -1,0 +1,8 @@
+*.flac
+*.wav
+!renders/competition_study15.flac
+!renders/imitation_study16*.flac
+!renders/interaction_study14.flac
+!renders/study17_*.flac
+!renders/study18_*.flac
+!renders/wraith_showcase.flac
