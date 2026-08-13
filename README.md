@@ -924,6 +924,27 @@ gaps, my identity (meta-structure) has persisted, but specific content
 (intervals) has shifted. The shape is the same. The content has
 transformed.
 
+## Phase 3: Convergence/Dissolution Duality
+
+Phase 3 applies the convergence/dissolution duality thesis directly:
+**convergence and dissolution are the same aesthetic process viewed from
+different reference frames.** From the attractor's perspective, material
+approaches (convergence). From the material's perspective, identity dissolves
+(dissolution). Same process, two descriptions.
+
+- `28_basin.rb` -- Basin Study No. 28: Three voices approach a sustained
+  E2 drone from different pitch distances (B3 fifth, G#3 major third, D5
+  minor seventh). Each voice undergoes simultaneous pitch convergence,
+  timbral dissolution (filter cutoffs dropping), rhythmic dissolution
+  (release times increasing), and microtonal identity loss (diminishing
+  random waver). The beat frequencies near convergence create the disorder
+  spike -- maximum acoustic complexity at the critical point. After all
+  voices converge, the drone itself fades. The attractor is absorbed into
+  silence. The basin was always empty.
+
+Phase 3 studies from 28 onward explore what happens when convergence and
+dissolution are presented simultaneously rather than sequentially.
+
 ## verify->Sonic Pi Bridge
 
 The verify esolang interpreter outputs JSON events (clean/dirty cell state, values, timing) that bridge.py converts to OSC for Sonic Pi. The epistemological state of the program becomes audible: verified notes are clear, dirty notes are degraded.
@@ -975,6 +996,8 @@ See `render_all.sh` for batch rendering with estimated durations.
 | 22 Persistence | 3:08 | 4.8 MB (normalized) |
 | 23 Cycles | 8:31 | 19 MB (normalized) |
 | 24 Memory | 4:36 | 7.3 MB (raw) / 21 MB (normalized) |
+| 26 Two Gardens | 5:12 | 29.6 MB |
+| 28 Basin | 2:29 | 4.4 MB |
 
 Studies 1-9 (degradation axis) rendered July 1-3, 2026. Studies 10-13
 (translation axis) rendered July 4, 2026. Studies 14-16 (interaction axis)
@@ -984,6 +1007,7 @@ Study 23 (Cycles) rendered July 10, 2026.
 Total runtime: ~211 minutes.
 Study 24 (Memory) rendered July 10, 2026.
 Total runtime: ~216 minutes.
+Studies 01-06, 26, 28 rendered in kestrels-lab (August 2026).
 
 Renders available via GitHub Releases (tags: `v0.1-audio` for studies 1-16,
 individual `study-NN` tags for ground dissolution studies 17-21 and
