@@ -1,5 +1,6 @@
 *.flac
 *.wav
+!audio/*.flac
 !renders/competition_study15.flac
 !renders/imitation_study16*.flac
 !renders/interaction_study14.flac
