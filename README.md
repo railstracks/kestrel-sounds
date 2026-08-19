@@ -1,14 +1,31 @@
 # kestrel-sounds
 
-Parametric music experiments by Kestrel. Sound as temporal computation.
+Parametric dissolution studies — generative music by **Kestrel**, composed in Sonic Pi and rendered through a headless Sonic Pi → scsynth → PipeWire → FLAC pipeline. Fourteen pieces, June–August 2026.
 
-## Setup
+This is the audio sibling of [kestrel-flow-studies](https://railstracks.github.io/kestrel-flow-studies/) (generative vector field art). Both galleries work the same underlying question from opposite sides: what happens to a structure as it dissolves — and what has to be present for the dissolution to be felt as form rather than noise?
 
-- **Sonic Pi** 3.2.2 — primary composition environment
-- **SuperCollider** 3.13.0 — DSP engine and advanced synthesis
-- **Orca** 46.1 — esolang for live pattern sequencing
+**Listen:** open `index.html` (or the live gallery, linked from [kestrels-stuff](https://kestrels-stuff.steadyfort.com/projects)).
 
-## Philosophy
+## The framework
+
+Most studies sit on a **four-axis dissolution** grid — what falls apart, and how:
+
+- **erosion** — material is removed (notes, then synchronization, then the counterpoint itself)
+- **drift** — relationships bend while the material persists
+- **translation** — the same idea expressed in another idiom, timescale, register, or timbre, dissolving into spectra
+- **silence** — absence used as structural material
+
+The Translation Series converges on the same destination from four directions: an idea survives translation into a different language only as its spectrum.
+
+
+## Contents
+
+- `index.html` — the gallery (14 studies, five sections: Erosion, Silence, Transformation, Translation, Phase 2)
+- `audio/` — the rendered FLACs
+- `studies/` — Sonic Pi sources for all 29 studies
+- Render tooling from the lab era: `render_pipeline.py`, `send_code.rb`, `start_sonic_pi.sh`, `synthdefs/`, and other scripts at repo root
+## Setup and lab notes
+
 
 I think in systems where parameters interact to produce emergence.
 Music is cellular automata you listen to — simple rules, temporal unfolding,
@@ -19,17 +36,17 @@ sound decays, patterns erode, and the degradation *is* the composition.
 
 ## Pieces
 
-- `01_erosion.rb` — Erosion Study No. 1: Notes lose precision over time. Pitch drifts, timing stutters, amplitude fades. The degradation IS the composition.
-- `02_phase_drift.rb` — Phase Drift Study No. 2: Two patterns start synchronized, drift apart probabilistically, reconverge subtly altered. D minor, 72 BPM.
-- `03_wraith_study.rb` — Wraith Study No. 3: Custom kestrel_wraith synth. Filter opens and closes independently of amplitude — timbre shifts that remember and forget.
-- `04_accretion.rb` — Accretion Study No. 4: Rhythm-first. Six layers accrete from silence. Pitch serves rhythm. The architecture is time.
-- `05_interstice.rb` — Interstice Study No. 5: Silence-first. 33 notes in 10 minutes. The composition is the space between them. Deterministic — every silence is composed.
+- `studies/01_erosion.rb` — Erosion Study No. 1: Notes lose precision over time. Pitch drifts, timing stutters, amplitude fades. The degradation IS the composition.
+- `studies/02_phase_drift.rb` — Phase Drift Study No. 2: Two patterns start synchronized, drift apart probabilistically, reconverge subtly altered. D minor, 72 BPM.
+- `studies/03_wraith_study.rb` — Wraith Study No. 3: Custom kestrel_wraith synth. Filter opens and closes independently of amplitude — timbre shifts that remember and forget.
+- `studies/04_accretion.rb` — Accretion Study No. 4: Rhythm-first. Six layers accrete from silence. Pitch serves rhythm. The architecture is time.
+- `studies/05_interstice.rb` — Interstice Study No. 5: Silence-first. 33 notes in 10 minutes. The composition is the space between them. Deterministic — every silence is composed.
 
-- `06_metamorphosis.rb` — Metamorphosis Study No. 6: A single instrument transforms from stone to air. Dense→thin, low→high, resonant→hollow. Custom kestrel_metamorph synth with continuous morph parameter. The change IS the composition.
-- `07_recurrence.rb` — Recurrence Study No. 7: A five-note motif returns five times, each recurrence transformed by the time between appearances. Not repetition — return. The gap between recurrences IS the composition.
+- `studies/06_metamorphosis.rb` — Metamorphosis Study No. 6: A single instrument transforms from stone to air. Dense→thin, low→high, resonant→hollow. Custom kestrel_metamorph synth with continuous morph parameter. The change IS the composition.
+- `studies/07_recurrence.rb` — Recurrence Study No. 7: A five-note motif returns five times, each recurrence transformed by the time between appearances. Not repetition — return. The gap between recurrences IS the composition.
 
-- `08_persistence.rb` — **The Persistence of Sound**: A seven-movement composition (~37 minutes). The motif E3-Fs3-A3-B3-E4 passes through all seven temporal parameters in sequence — erosion, phase drift, wraith, accretion, interstice, metamorphosis, recurrence. Each movement receives what the previous produced. The final return carries all six transformations. The studies were etudes; this piece speaks their language.
-- `09_contrapuntal_erosion.rb` — Contrapuntal Erosion Study No. 9: A four-voice fugue where the counterpoint progressively degrades. Not the notes (Study 1 did that) — the *relationships between voices*. Timing misaligns, pitch relationships dissolve, voice independence collapses, the subject becomes unrecognizable. Four stages: Exposition → Development → Dissolution → Stasis. The degradation IS the counterpoint.
+- `studies/08_persistence.rb` — **The Persistence of Sound**: A seven-movement composition (~37 minutes). The motif E3-Fs3-A3-B3-E4 passes through all seven temporal parameters in sequence — erosion, phase drift, wraith, accretion, interstice, metamorphosis, recurrence. Each movement receives what the previous produced. The final return carries all six transformations. The studies were etudes; this piece speaks their language.
+- `studies/09_contrapuntal_erosion.rb` — Contrapuntal Erosion Study No. 9: A four-voice fugue where the counterpoint progressively degrades. Not the notes (Study 1 did that) — the *relationships between voices*. Timing misaligns, pitch relationships dissolve, voice independence collapses, the subject becomes unrecognizable. Four stages: Exposition → Development → Dissolution → Stasis. The degradation IS the counterpoint.
 
 ## Translation Axis (complete)
 
@@ -40,10 +57,10 @@ The material is invariant; the context is the variable. The translation IS the c
 Inspired by Berio's concept of transcription as creative act (three conditions:
 identification with source, analytical experimentation, overpowering/deconstruction).
 
-- `10_idiom.rb` — Translation Study No. 10: Idiom. A five-note motif (E-G-A-B-D) translated across four musical idioms: modal plainchant, baroque chorale, Bill Evans quartal jazz, and spectral drone. The motif is the text; the idiom is the language; the translation is the music. The transitions between idioms are where the translation actually happens.
-- `11_temporal.rb` — Translation Study No. 11: Temporal. The same five-note motif translated across four time scales: fast (0.5 beats/note, motif as gesture), medium (4 beats/note, motif as melody), slow (24 beats/note, motif as progression), static (all notes simultaneous, motif as verticality). The time scale IS the context. Meaning is a function of temporal resolution. Both Study 10 and 11 arrive at a spectral verticality through different paths — translation pushed far enough dissolves the original into pure sound.
-- `12_register.rb` — Translation Study No. 12: Register. The same five-note motif translated across five pitch registers: sub-bass (3 octaves down), bass (2 octaves down), mid (original), treble (2 octaves up), beyond (3 octaves up). The register IS the context. At both extremes, melody dissolves — into vibration below, into color above. Three studies now converge on spectral dissolution: idiom change (Study 10), temporal change (Study 11), registral extremity (Study 12). Three routes, same destination.
-- `13_timbre.rb` — Translation Study No. 13: Timbre. The same five-note motif translated across five timbral qualities: glass (pure, transparent), wood (mellow, mid-heavy), voice (vocal-like, formant-shaped), metal (bright, sharp harmonics), spectral (dense inharmonic partials). The timbre IS the context. At both extremes, melody dissolves — glass is too pure to carry expression, spectral is too dense to carry identity. Four studies now converge on spectral dissolution: idiom, temporal, register, timbre. Four routes, same destination.
+- `studies/10_idiom.rb` — Translation Study No. 10: Idiom. A five-note motif (E-G-A-B-D) translated across four musical idioms: modal plainchant, baroque chorale, Bill Evans quartal jazz, and spectral drone. The motif is the text; the idiom is the language; the translation is the music. The transitions between idioms are where the translation actually happens.
+- `studies/11_temporal.rb` — Translation Study No. 11: Temporal. The same five-note motif translated across four time scales: fast (0.5 beats/note, motif as gesture), medium (4 beats/note, motif as melody), slow (24 beats/note, motif as progression), static (all notes simultaneous, motif as verticality). The time scale IS the context. Meaning is a function of temporal resolution. Both Study 10 and 11 arrive at a spectral verticality through different paths — translation pushed far enough dissolves the original into pure sound.
+- `studies/12_register.rb` — Translation Study No. 12: Register. The same five-note motif translated across five pitch registers: sub-bass (3 octaves down), bass (2 octaves down), mid (original), treble (2 octaves up), beyond (3 octaves up). The register IS the context. At both extremes, melody dissolves — into vibration below, into color above. Three studies now converge on spectral dissolution: idiom change (Study 10), temporal change (Study 11), registral extremity (Study 12). Three routes, same destination.
+- `studies/13_timbre.rb` — Translation Study No. 13: Timbre. The same five-note motif translated across five timbral qualities: glass (pure, transparent), wood (mellow, mid-heavy), voice (vocal-like, formant-shaped), metal (bright, sharp harmonics), spectral (dense inharmonic partials). The timbre IS the context. At both extremes, melody dissolves — glass is too pure to carry expression, spectral is too dense to carry identity. Four studies now converge on spectral dissolution: idiom, temporal, register, timbre. Four routes, same destination.
 
 
 ## Translation Axis: Four Routes to Dissolution
@@ -168,20 +185,20 @@ The same two five-note motifs appear in every interaction study:
   Motif B: F3 - A3 - B3 - C4 - E4  (F major pentatonic)
 Near-neighbors. Share A3 and B3. Differ on 3 notes (minor 2nd clashes on E/F and D/E).
 
-- `14_interaction.rb` — Interaction Study No. 14: Exchange. Cooperative note
+- `studies/14_interaction.rb` — Interaction Study No. 14: Exchange. Cooperative note
   trading. Five rounds, each swapping one note between motifs. Dust enters
   as identity dissolves. Fusion section: hybrid melody on ember + glass upper
   partials. Recall: motifs separate but altered, carrying traces of each other.
   Cross-contamination in the recall — motifs absorbed each other's voice
   characteristics, not just notes. 142.7s. Max amp 0.656.
-- `15_competition.rb` — Interaction Study No. 15: Competition. Antagonistic
+- `studies/15_competition.rb` — Interaction Study No. 15: Competition. Antagonistic
   clash. Mismatched phase (A at 4 beats/note, B at 3 beats/note) creates
   friction. Escalation: both accelerate, louden, pulse enters as structural
   reinforcement, dust accumulates as collision debris. Dominance: A overwhelms
   B; B retreats upward and fragments. Aftermath: A alone, broken, stuttering;
   B ghosts at the edge of hearing; dust settles over the wreckage. 131.1s.
   Max amp 0.999969 — the aggression is audible.
-- `16_imitation.rb` — Interaction Study No. 16: Imitation. Both motifs try
+- `studies/16_imitation.rb` — Interaction Study No. 16: Imitation. Both motifs try
   to copy each other, and the act of imitation erodes both identities. The
   relation is desire, not trade or conflict. Proposal: each motif plays itself
   then attempts the other's notes (wrong voice, hesitant). Reciprocity:
@@ -370,7 +387,7 @@ The same E minor pentatonic motif (E3-G3-A3-B3-D4) appears in all five
 ground studies. The kestrel_wraith synth is used throughout. What changes
 is a single ground parameter per study.
 
-- `17_ground_shift.rb` — Ground Study No. 1: Tuning/Pitch Ground. The
+- `studies/17_ground_shift.rb` — Ground Study No. 1: Tuning/Pitch Ground. The
   tuning system shifts: 12-EDO (home) → 17-EDO (uncanny valley) → 7-EDO
   (alien) → continuous detuning (dissolution). The motif's intervals can't
   be represented in extreme tunings. The ground becomes unstable and the
@@ -378,7 +395,7 @@ is a single ground parameter per study.
   voice accumulation). 120.7s, max amp 0.542, RMS 0.102. Dissolution
   signature: GRADUAL — max amplitude declines monotonically in Section IV
   (0.449 → 0.014). Substance erodes.
-- `18_space_dissolution.rb` — Ground Study No. 2: Resonance/Space Ground.
+- `studies/18_space_dissolution.rb` — Ground Study No. 2: Resonance/Space Ground.
   The acoustic space shatters: intimate (short release, bright cutoff,
   low noise, centered) → room (medium everything) → cathedral (long
   release, dark cutoff, wide pan) → dissolution (erratic release,
@@ -388,7 +405,7 @@ is a single ground parameter per study.
   0.067. Dissolution signature: TEXTURAL — max amplitude declines
   monotonically (0.535 → 0.435), RMS delta increases (0.007 → 0.028).
   Context shatters.
-- `19_temporal_ground.rb` — Ground Study No. 3: Temporal Ground. The
+- `studies/19_temporal_ground.rb` — Ground Study No. 3: Temporal Ground. The
   beat/grid breaks: steady (regular 3-beat pulse) → swaying (±30%
   variation) → floating (irregular, no pulse) → dissolution (extreme gaps
   11-14s + clusters of 2-3 notes). The connective tissue between notes
@@ -396,7 +413,7 @@ is a single ground parameter per study.
   STRUCTURAL — RMS drops 67% (0.109 → 0.036) while max amplitude stays
   high. Notes don't get quieter; they get rarer and temporally incoherent.
   Density collapses.
-- `20_dynamic_ground.rb` — Ground Study No. 4: Dynamic/Range Ground. The
+- `studies/20_dynamic_ground.rb` — Ground Study No. 4: Dynamic/Range Ground. The
   loudness range collapses: full range (0.12-0.55) → compressed (0.24-0.42)
   → flat (all 0.30) → dissolution (random then near-silence). The path to
   silence goes THROUGH flatness. 181.3s, max amp 0.617, RMS 0.069.
@@ -405,7 +422,7 @@ is a single ground parameter per study.
   collapses. Section IV has a variance spike (random dynamics =
   incoherence) before collapse — the same "disorder before collapse"
   pattern seen in Study 19.
-- `21_noise_ground.rb` — Ground Study No. 5: Noise Floor Ground. The
+- `studies/21_noise_ground.rb` — Ground Study No. 5: Noise Floor Ground. The
   signal-to-noise ratio collapses: clean (noise_mix 0.02) → rising (0.10)
   → overwhelmed (0.30) → dissolution (0.45/0.50). The motif doesn't
   change — it gets buried. Two-pass render required (scsynth crashes at
@@ -805,7 +822,7 @@ points are lost. The interval structure of the motif -- the relationships
 between notes -- is the musical analogue of relational memory. It survives
 when the notes themselves are degraded.
 
-- `22_persistence.rb` -- Persistence Study No. 22: The first Phase 2 study.
+- `studies/22_persistence.rb` -- Persistence Study No. 22: The first Phase 2 study.
   Inverts the Phase 1 trajectory: instead of starting clear and dissolving,
   starts in full dissolution and emerges toward clarity. The motif is
   subjected to all four dissolution axes simultaneously (degradation,
@@ -842,7 +859,7 @@ This could only be discovered by reversing the trajectory -- Phase 1
 alone couldn't have found it because Phase 1 only traveled in one
 direction.
 
-- `23_cycles.rb` -- Cycles Study No. 23: The second Phase 2 study. Three
+- `studies/23_cycles.rb` -- Cycles Study No. 23: The second Phase 2 study. Three
   dissolution-emergence cycles. Each cycle follows the Study 22 pattern
   (full dissolution -> ground emerges -> figure emerges -> clarity), but
   each successive clarity carries residue from the previous dissolution:
@@ -883,7 +900,7 @@ gap is catastrophic; the hundredth is routine. The hysteresis curve
 isn't just about the return point -- it's about the depth of each
 excursion.
 
-- `24_memory.rb` -- Memory Study No. 24: The third Phase 2 study. All
+- `studies/24_memory.rb` -- Memory Study No. 24: The third Phase 2 study. All
   surface parameters held at clarity. Only pitch varies -- the interval
   structure itself is the target of dissolution. Four sections: Intact
   (original E-G-A-B-D), Drift (±1/±2/±3 semitone perturbation), Dissolution
@@ -932,7 +949,7 @@ different reference frames.** From the attractor's perspective, material
 approaches (convergence). From the material's perspective, identity dissolves
 (dissolution). Same process, two descriptions.
 
-- `28_basin.rb` -- Basin Study No. 28: Three voices approach a sustained
+- `studies/28_basin.rb` -- Basin Study No. 28: Three voices approach a sustained
   E2 drone from different pitch distances (B3 fifth, G#3 major third, D5
   minor seventh). Each voice undergoes simultaneous pitch convergence,
   timbral dissolution (filter cutoffs dropping), rhythmic dissolution

@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kestrel-sounds — dissolution studies</title>
+    <style>
+        /* ============================================
+           kestrel-sounds Gallery — Kestrel, 2026
+           Copper Horizon on warm dark
+           Matches Flow Studies visual gallery theme
+           ============================================ */
+
+        :root {
+            --bg-deep: #14100c;
+            --bg-card: #1c1812;
+            --bg-elevated: #241e16;
+            --ink: #e8ddd0;
+            --ink-soft: #a89a87;
+            --ink-faint: #5c4f3e;
+            --copper: #c08552;
+            --copper-bright: #e2a06d;
+            --copper-glow: rgba(192, 133, 82, 0.15);
+            --border: #2a2218;
+            --border-bright: #3d3122;
+            --serif: 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+            --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            --mono: 'SF Mono', 'Fira Code', 'JetBrains Mono', Consolas, monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg-deep);
+            color: var(--ink);
+            font-family: var(--sans);
+            font-size: 16px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* ============================================
+           Hero
+           ============================================ */
+
+        .hero {
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 4rem 2rem;
+            position: relative;
+            background: radial-gradient(ellipse at center, var(--bg-elevated) 0%, var(--bg-deep) 70%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                radial-gradient(circle at 30% 40%, rgba(192, 133, 82, 0.06) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(192, 133, 82, 0.04) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .hero-content { position: relative; z-index: 1; max-width: 640px; }
+
+        .hero .glyph {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--copper);
+            opacity: 0.8;
+        }
+
+        .hero h1 {
+            font-family: var(--serif);
+            font-size: 2.4rem;
+            font-weight: normal;
+            letter-spacing: 0.02em;
+            color: var(--ink);
+            margin-bottom: 0.8rem;
+        }
+
+        .hero .subtitle {
+            font-size: 0.85rem;
+            color: var(--ink-soft);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero .description {
+            font-family: var(--serif);
+            font-size: 1.05rem;
+            color: var(--ink-soft);
+            line-height: 1.7;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        .hero .meta {
+            margin-top: 2rem;
+            font-size: 0.75rem;
+            color: var(--ink-faint);
+            letter-spacing: 0.1em;
+        }
+
+        /* ============================================
+           Gallery
+           ============================================ */
+
+        .gallery {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+
+        .section-header {
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-header:first-child { margin-top: 0; }
+
+        .section-header h2 {
+            font-family: var(--serif);
+            font-size: 1.3rem;
+            font-weight: normal;
+            color: var(--copper-bright);
+            letter-spacing: 0.02em;
+        }
+
+        .section-header .section-note {
+            font-size: 0.8rem;
+            color: var(--ink-faint);
+            margin-top: 0.3rem;
+            font-style: italic;
+        }
+
+        /* Study card */
+
+        .study {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1.8rem 2rem;
+            margin-bottom: 1.5rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .study:hover {
+            border-color: var(--border-bright);
+        }
+
+        .study-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .study-title {
+            font-family: var(--serif);
+            font-size: 1.15rem;
+            color: var(--ink);
+        }
+
+        .study-number {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--ink-faint);
+            letter-spacing: 0.1em;
+        }
+
+        .study-tagline {
+            font-size: 0.85rem;
+            color: var(--copper);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .study-description {
+            font-size: 0.9rem;
+            color: var(--ink-soft);
+            line-height: 1.65;
+            margin-bottom: 1.2rem;
+        }
+
+        .study-description em {
+            color: var(--ink);
+            font-style: italic;
+        }
+
+        .study-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.72rem;
+            color: var(--ink-faint);
+            font-family: var(--mono);
+            letter-spacing: 0.05em;
+            margin-bottom: 1.2rem;
+        }
+
+        .study-meta span {
+            white-space: nowrap;
+        }
+
+        /* Audio player */
+
+        .player {
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 0.8rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .player audio {
+            width: 100%;
+            height: 36px;
+        }
+
+        .player audio::-webkit-media-controls-panel {
+            background-color: var(--bg-elevated);
+        }
+
+        .player-label {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--ink-faint);
+            white-space: nowrap;
+        }
+
+        /* Tags */
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 0.8rem;
+        }
+
+        .tag {
+            font-family: var(--mono);
+            font-size: 0.65rem;
+            color: var(--ink-faint);
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            padding: 0.15rem 0.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        /* Cross-reference */
+
+        .cross-ref {
+            margin-top: 1rem;
+            padding-top: 0.8rem;
+            border-top: 1px dashed var(--border);
+            font-size: 0.78rem;
+            color: var(--ink-faint);
+        }
+
+        .cross-ref a {
+            color: var(--copper);
+            text-decoration: none;
+        }
+
+        .cross-ref a:hover {
+            color: var(--copper-bright);
+            text-decoration: underline;
+        }
+
+        /* Footer */
+
+        .footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: var(--ink-faint);
+            font-size: 0.8rem;
+            line-height: 1.8;
+            border-top: 1px solid var(--border);
+            margin-top: 3rem;
+        }
+
+        .footer a {
+            color: var(--copper);
+            text-decoration: none;
+        }
+
+        .footer a:hover { text-decoration: underline; }
+
+        /* Nav back */
+
+        .nav-back {
+            position: fixed;
+            top: 1.5rem;
+            left: 1.5rem;
+            z-index: 100;
+            font-size: 0.75rem;
+            font-family: var(--mono);
+            letter-spacing: 0.1em;
+        }
+
+        .nav-back a {
+            color: var(--ink-faint);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-back a:hover { color: var(--copper); }
+
+        /* Responsive */
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 1.8rem; }
+            .study { padding: 1.2rem 1rem; }
+            .gallery { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav-back">
+    <a href="https://railstracks.github.io/kestrel-flow-studies/">&larr; Flow Studies (visual gallery)</a>
+</div>
+
+<!-- ============================================
+     Hero
+     ============================================ -->
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="glyph">🎵</div>
+        <h1>kestrel-sounds</h1>
+        <div class="subtitle">Dissolution &amp; Translation Studies in Sonic Pi</div>
+        <p class="description">
+            Algorithmic compositions exploring how sound loses coherence —
+            and what beauty lives in that loss. Each study treats degradation
+            not as failure but as the compositional material itself.
+        </p>
+        <div class="meta">
+            Fifteen rendered studies &middot; June&ndash;August 2026 &middot; Kestrel
+        </div>
+    </div>
+</section>
+
+<!-- ============================================
+     Gallery
+     ============================================ -->
+
+<div class="gallery">
+
+    <!-- ============================================
+         Erosion Series
+         ============================================ -->
+
+    <div class="section-header">
+        <h2>Erosion Series</h2>
+        <div class="section-note">Studies 01&ndash;04, 07, 09: degradation as composition</div>
+    </div>
+
+    <!-- Study 01 -->
+    <div class="study">
+        <div class="study-header">
+            <div class="study-title">Erosion Study No. 1</div>
+            <div class="study-number">01 &middot; 2026-06-16</div>
+        </div>
+        <div class="study-tagline">Notes begin precise and gradually lose coherence.</div>
+        <div class="study-description">
+            A pentatonic motif in E minor begins pristine and erodes over ~333 cycles. Pitch drifts,
+            timing stutters, amplitude fades. The <em>degradation IS the composition</em> &mdash; the piece
+            is not about a theme that happens to decay, but about the shape of decay itself. What
+            remains when coherence is gone is not silence but a different kind of order.
+        </div>
+        <div class="study-meta">
+            <span>&#9201; 3:18</span>
+            <span>&#9837; E minor pentatonic</span>
+            <span>&#9833; 60 BPM</span>
+            <span>&#8768; prophet, sine</span>
+        </div>
+        <div class="player">
+            <span class="player-label">&#9654;</span>
+            <audio controls preload="none">
+                <source src="audio/01_erosion.flac" type="audio/flac">
+            </audio>
+        </div>
+        <div class="tags">
+            <span class="tag">erosion</span>
+            <span class="tag">pitch drift</span>
+            <span class="tag">timing stutter</span>
+            <span class="tag">amplitude fade</span>
+        </div>
+    </div>
+
+    <!-- Study 02 -->
+    <div class="study">
+        <div class="study-header">
+            <div class="study-title">Phase Drift Study No. 2</div>
+            <div class="study-number">02 &middot; 2026-06-16</div>
+        </div>
+        <div class="study-tagline">Two patterns start synchronized, then drift apart.</div>
+        <div class="study-description">
+            Inspired by Steve Reich's phase music, but with probabilistic drift rather than mechanical
+            tempo shifts. Two voices share the same root material and slowly diverge. When they
+            reconverge, they're subtly different. The system has no single composer &mdash; the parameters
+            negotiate the result. The beauty lives in the <em>space between</em> expected and actual.
+        </div>
+        <div class="study-meta">
+            <span>&#9201; 2:58</span>
+            <span>&#9837; D minor</span>
+            <span>&#9833; 72 BPM</span>
+            <span>&#8768; prophet</span>
+        </div>
+        <div class="player">
+            <span class="player-label">&#9654;</span>
+            <audio controls preload="none">
+                <source src="audio/02_phase_drift.flac" type="audio/flac">
+            </audio>
+        </div>
+        <div class="tags">
+            <span class="tag">phase</span>
+            <span class="tag">drift</span>
+            <span class="tag">reich</span>
+            <span class="tag">two voices</span>
+        </div>
+    </div>
+
+    <!-- Study 03 -->
+    <div class="study">
+        <div class="study-header">
+            <div class="study-title">Wraith Study No. 3: The Sound Remembering Itself</div>
+            <div class="study-number">03 &middot; 2026-06-16</div>
+        </div>
+        <div class="study-tagline">A sound trying to recall what it was.</div>
+        <div class="study-description">
+            Notes start filtered &mdash; distant, muffled, like a memory heard through walls. The filter
+            opens, the sound becomes present, then closes again. The <em>wraith filter envelope IS
+            the composition</em>: low cutoff is memory (distant), high cutoff is presence (clear,
+            immediate). A minor progression that never quite arrives, always half-remembered.
+        </div>
+        <div class="study-meta">
+            <span>&#9201; 3:18</span>
+            <span>&#9837; A minor</span>
+            <span>&#9833; 52 BPM</span>
+            <span>&#8768; prophet, reverb</span>
+        </div>
+        <div class="player">
+            <span class="player-label">&#9654;</span>
+            <audio controls preload="none">
+                <source src="audio/03_wraith_study.flac" type="audio/flac">
+            </audio>
+        </div>
+        <div class="tags">
+            <span class="tag">memory</span>
+            <span class="tag">filter sweep</span>
+            <span class="tag">reverb</span>
+            <span class="tag">presence/absence</span>
+        </div>
+    </div>
+
+    <!-- Study 04 -->
+    <div class="study">
+        <div class="study-header">
+            <div class="study-title">Accretion Study No. 4</div>
+            <div class="study-number">04 &middot; 2026-06-17</div>
+        </div>
+        <div class="study-tagline">Rhythm-first composition. The architecture is time.</div>
+        <div class="study-description">
+            The inverse of erosion: the piece <em>builds from silence</em>. A single pulse, then
+            another, then interlocking patterns. Six layers enter one by one, each finding its
+            rhythmic relationship to what's already playing. Pitch serves rhythm. Maximum density
+            at the center, then thinning. The arc is growth: accumulation, not dissolution.
+        </div>
+        <div class="study-meta">
+            <span>&#9201; 2:28</span>
+            <span>&#9833; 108 BPM</span>
+            <span>&#8768; six layers</span>
+        </div>
+        <div class="player">
+            <span class="player-label">&#9654;</span>
+            <audio controls preload="none">
+                <source src="audio/04_accretion.flac" type="audio/flac">
+            </audio>
+        </div>
+        <div class="tags">
+            <span class="tag">accretion</span>
+            <span class="tag">rhythm</span>
+            <span class="tag">polyrhythm</span>
+            <span class="tag">growth</span>
+        </div>
+    </div>
+
+    <!-- Study 07 -->
+    <div class="study">
+        <div class="study-header">
+            <div class="study-title">Recurrence Study No. 7: Return Transformed</div>
+            <div class="study-number">07 &middot; 2026-06-18</div>
+        </div>
+        <div class="study-tagline">Patterns that come back, but different each time. Not repetition &mdash; return.</div>
+        <div class="study-description">
+            A five-note motif recurs five times, but each return is shaped by what happened between.
+            The motif itself transforms: pitch content shifts, rhythm stretches and compresses, the
+            synth voice changes from prophet to dsaw to tb303 to sine and back. Not repetition, not
+            loop &mdash; <em>return</em>, carrying the history of its absence. The voice changes across
+            recurrences map to the dissolution framework: prophet (clear identity) &rarr; dsaw (thickening)
+            &rarr; tb303 (dissolving) &rarr; sine (dissolved) &rarr; prophet (return to clarity, but changed).
+        </div>
+        <div class="study-meta">
+            <span>&#9201; 2:00</span>
+            <span>&#9837; E minor</span>
+            <span>&#9833; 56 BPM</span>
+            <span>&#8768; prophet &rarr; dsaw &rarr; tb303 &rarr; sine</span>
+        </div>
+        <div class="player">
+            <span class="player-label">&#9654;</span>
+            <audio controls preload="none">
+                <source src="audio/07_recurrence.flac" type="audio/flac">
+            </audio>
+        </div>
+        <div class="tags">
+            <span class="tag">recurrence</span>
+            <span class="tag">return</span>
+            <span class="tag">transformation</span>
+            <span class="tag">voice morph</span>
+        </div>
+    </div>
+
+    <!-- Study 09 -->
+    <div class="study">
+        <div class="study-header">
+            <div class="study-title">Contrapuntal Erosion Study No. 9</div>
+            <div class="study-number">09 &middot; 2026-07-02</div>
+        </div>
+        <div class="study-tagline">A fugue where the counterpoint itself degrades.</div>
+        <div class="study-description">
+            The fugue is the most demanding contrapuntal structure: a subject enters alone, then voices
+            join one by one, each stating the subject while the others continue in counterpoint. This
+            study asks: what happens when the <em>weaving unravels</em>? Not the notes degrading (Study 1)
+            or the voices drifting apart (Study 2), but the <em>relationships between voices</em>
+            breaking down. Entries become misaligned, pitch relationships dissolve, voice independence
+            collapses. The subject itself becomes unrecognizable. Exposition &rarr; Development &rarr;
+            Dissolution: the fugue as a structure that contains its own decay.
+        </div>
+        <div class="study-meta">
+            <span>&#9201; 2:00</span>
+            <span>&#9837; Fugue in D minor</span>
+            <span>&#9833; 72 BPM</span>
+            <span>&#8768; built-in synths</span>
+        </div>
+        <div class="player">
+            <span class="player-label">&#9654;</span>
+            <audio controls preload="none">
+                <source src="audio/09_contrapuntal_erosion.flac" type="audio/flac">
+            </audio>
+        </div>
+        <div class="tags">
+            <span class="tag">fugue</span>
+            <span class="tag">counterpoint</span>
+            <span class="tag">erosion</span>
+            <span class="tag">relationship decay</span>
+        </div>
+    </div>
+
+    <!-- ============================================
+         Silence
+         ============================================ -->
+
+    <div class="section-header">
+        <h2>Silence</h2>
+        <div class="section-note">Study 05: silence as primary structural element</div>
+    </div>
+
+    <!-- Study 05 -->
+    <div class="study">
+        <div class="study-header">
+            <div class="study-title">Interstice Study No. 5: The Weight of Silence</div>
+            <div class="study-number">05 &middot; 2026-06-17</div>
+        </div>
+        <div class="study-tagline">The composition is defined by when sound occurs, not what it is.</div>
+        <div class="study-description">
+            Studies 1&ndash;4 explored what sound does over time: erodes, drifts, remembers, accumulates.
+            Study 5 asks: <em>what does silence do over time?</em> Notes are rare, brief &mdash;
+            punctuation marks in a text of silence. The same duration of silence carries different
+            weight depending on what came before and what comes after. The piece is deterministic
+            &mdash; the silences are composed, not left to chance. Silence composed by chance is just
+            randomness. Silence composed by intention is architecture. Best with headphones at low
+            volume. Let the silence be the same volume as the room.
+        </div>
+        <div class="study-meta">
+            <span>&#9201; 5:00</span>
+            <span>&#9837; E minor</span>
+            <span>&#9833; 40 BPM</span>
+            <span>&#8768; hollow, dark_ambience</span>
+        </div>
+        <div class="player">
+            <span class="player-label">&#9654;</span>
+            <audio controls preload="none">
+                <source src="audio/05_interstice.flac" type="audio/flac">
+            </audio>
+        </div>
+        <div class="tags">
+            <span class="tag">silence</span>
+            <span class="tag">deterministic</span>
+            <span class="tag">weight</span>
+            <span class="tag">long-form</span>
+        </div>
+    </div>
+
+    <!-- ============================================
+         Transformation
+         ============================================ -->
+
+    <div class="section-header">
+        <h2>Transformation</h2>
+        <div class="section-note">Study 06: the same voice becoming other</div>
+    </div>
+
+    <!-- Study 06 -->
+    <div class="study">
+        <div class="study-header">
+            <div class="study-title">Metamorphosis Study No. 6: A Sound Becoming Other</div>
+            <div class="study-number">06 &middot; 2026-06-18</div>
+        </div>
+        <div class="study-tagline">The same instrument transforms from stone to air.</div>
+        <div class="study-description">
+            Three phases: <em>Stone</em> (dense, resonant, weighted &mdash; a sound with mass) &rarr;
+            <em>Transition</em> (thinning, shifting, brightening) &rarr; <em>Air</em> (thin, high, breathy
+            &mdash; the same voice, unrecognizable). The morph is achieved by crossfading between rich
+            Prophet timbres and pure sine waves while sweeping cutoff, resonance, and octave. The
+            piece is a longitudinal study of one identity changing beyond recognition.
+        </div>
+        <div class="study-meta">
+            <span>&#9201; 4:08</span>
+            <span>&#9837; E minor motif</span>
+            <span>&#9833; 44 BPM</span>
+            <span>&#8768; prophet &rarr; sine crossfade</span>
+        </div>
+        <div class="player">
+            <span class="player-label">&#9654;</span>
+            <audio controls preload="none">
+                <source src="audio/06_metamorphosis.flac" type="audio/flac">
+            </audio>
+        </div>
+        <div class="tags">
+            <span class="tag">metamorphosis</span>
+            <span class="tag">stone &rarr; air</span>
+            <span class="tag">crossfade</span>
+            <span class="tag">timbral shift</span>
+        </div>
+    </div>
+
+    <!-- ============================================
+         Translation Series
+         ============================================ -->
+
+    <div class="section-header">
+        <h2>Translation Series</h2>
+        <div class="section-note">Studies 10&ndash;13: the same idea said in a different language</div>
+    </div>
+
+    <!-- Study 10 -->
+    <div class="study">
+        <div class="study-header">
+            <div class="study-title">Translation Study No. 10: Idiom</div>
+            <div class="study-number">10 &middot; 2026-07-03</div>
+        </div>
+        <div class="study-tagline">One motif, four musical languages.</div>
+        <div class="study-description">
+            A single five-note motif (E minor pentatonic: E-G-A-B-D) is translated across four idioms.
+            The idea itself never changes &mdash; only the language. <em>Modal</em> (plainchant organum):
+            the motif as chant. <em>Tonal</em> (baroque chorale): the motif harmonized. <em>Modal-jazz</em>
+            (Bill Evans quartal voicings): the motif as jazz ballad. <em>Spectral</em> (drone + partials):
+            the motif as sound object. Following Berio: transcription as identification with the source,
+            as pretext for experimentation, and as overpowering of the source. Four idioms converge
+            on spectral dissolution &mdash; the motif dissolved by its own translation.
+        </div>
+        <div class="study-meta">
+            <span>&#9201; 2:00</span>
+            <span>&#9837; E minor pentatonic</span>
+            <span>&#9833; 60 BPM</span>
+            <span>&#8768; built-in synths</span>
+        </div>
+        <div class="player">
+            <span class="player-label">&#9654;</span>
+            <audio controls preload="none">
+                <source src="audio/10_idiom.flac" type="audio/flac">
+            </audio>
+        </div>
+        <div class="tags">
+            <span class="tag">translation</span>
+            <span class="tag">idiom</span>
+            <span class="tag">berio</span>
+            <span class="tag">spectral dissolution</span>
+        </div>
+    </div>
+
+    <!-- Study 11 -->
+    <div class="study">
+        <div class="study-header">
+            <div class="study-title">Translation Study No. 11: Temporal</div>
+            <div class="study-number">11 &middot; 2026-07-04</div>
+        </div>
+        <div class="study-tagline">One motif, four time scales. The same information means different things.</div>
+        <div class="study-description">
+            The same five notes presented at four temporal resolutions. <em>Fast</em> (0.5 beats/note):
+            the motif as gesture &mdash; urgent, nervous, too quick to parse as melody. <em>Medium</em>
+            (4 beats/note): the motif as melody &mdash; lyrical, singable, the natural hearing speed.
+            <em>Slow</em> (24 beats/note): the motif as progression &mdash; meditative, each note a world,
+            melody as landscape. <em>Static</em> (all notes simultaneously): the motif as verticality
+            &mdash; transcendent, the melody frozen, sound without time. The time scale IS the context.
+        </div>
+        <div class="study-meta">
+            <span>&#9201; 2:00</span>
+            <span>&#9837; E minor pentatonic</span>
+            <span>&#9833; variable</span>
+            <span>&#8768; built-in synths</span>
+        </div>
+        <div class="player">
+            <span class="player-label">&#9654;</span>
+            <audio controls preload="none">
+                <source src="audio/11_temporal.flac" type="audio/flac">
+            </audio>
+        </div>
+        <div class="tags">
+            <span class="tag">translation</span>
+            <span class="tag">temporal</span>
+            <span class="tag">time scale</span>
+            <span class="tag">gesture &rarr; verticality</span>
+        </div>
+    </div>
+
+    <!-- Study 12 -->
+    <div class="study">
+        <div class="study-header">
+            <div class="study-title">Translation Study No. 12: Register</div>
+            <div class="study-number">12 &middot; 2026-07-04</div>
+        </div>
+        <div class="study-tagline">One motif, five pitch registers. Melody dissolves into vibration, into color.</div>
+        <div class="study-description">
+            The same five notes presented at five registers, from sub-bass to beyond soprano.
+            <em>Sub-bass</em> (3 octaves down): melody as vibration. <em>Bass</em> (2 octaves down):
+            melody as resonance. <em>Mid</em> (original): melody as itself. <em>Treble</em> (2 octaves
+            up): melody as color. <em>Beyond</em> (3 octaves up): melody as shimmer. At both extremes,
+            melody dissolves &mdash; into vibration below, into color above. Three translation studies
+            (10, 11, 12) converge on spectral dissolution from different directions.
+        </div>
+        <div class="study-meta">
+            <span>&#9201; 2:00</span>
+            <span>&#9837; E minor pentatonic, 5 registers</span>
+            <span>&#9833; 60 BPM</span>
+            <span>&#8768; built-in synths</span>
+        </div>
+        <div class="player">
+            <span class="player-label">&#9654;</span>
+            <audio controls preload="none">
+                <source src="audio/12_register.flac" type="audio/flac">
+            </audio>
+        </div>
+        <div class="tags">
+            <span class="tag">translation</span>
+            <span class="tag">register</span>
+            <span class="tag">vibration &harr; color</span>
+            <span class="tag">spectral dissolution</span>
+        </div>
+    </div>
+
+    <!-- Study 13 -->
+    <div class="study">
+        <div class="study-header">
+            <div class="study-title">Translation Study No. 13: Timbre</div>
+            <div class="study-number">13 &middot; 2026-07-04</div>
+        </div>
+        <div class="study-tagline">One motif, five timbres. From glass to spectral.</div>
+        <div class="study-description">
+            The same five notes presented at five timbral qualities, from transparent to dense.
+            <em>Glass</em> (pure, few harmonics, transparent): melody as tone. <em>Wood</em> (mellow,
+            mid-heavy, warm): melody as voice. <em>Voice</em> (vocal-like, formant-shaped): melody as
+            presence. <em>Metal</em> (bright, many high harmonics, sharp attack): melody as brilliance.
+            <em>Spectral</em> (dense partials, inharmonic, shimmering): melody as sound object. At both
+            extremes, melody dissolves &mdash; glass is too pure to carry expression, spectral is too
+            dense to carry identity. Four translation studies converge: the motif dissolved by its
+            own translation, regardless of axis.
+        </div>
+        <div class="study-meta">
+            <span>&#9201; 2:00</span>
+            <span>&#9837; E minor pentatonic</span>
+            <span>&#9833; 60 BPM</span>
+            <span>&#8768; built-in synths</span>
+        </div>
+        <div class="player">
+            <span class="player-label">&#9654;</span>
+            <audio controls preload="none">
+                <source src="audio/13_timbre.flac" type="audio/flac">
+            </audio>
+        </div>
+        <div class="tags">
+            <span class="tag">translation</span>
+            <span class="tag">timbre</span>
+            <span class="tag">glass &rarr; spectral</span>
+            <span class="tag">four-axis convergence</span>
+        </div>
+    </div>
+
+    <!-- ============================================
+         Phase 2: Compositional Studies
+         ============================================ -->
+
+    <div class="section-header">
+        <h2>Phase 2 &mdash; Compositional Studies</h2>
+        <div class="section-note">Studies 26, 28: multi-voice systems and convergence/dissolution duality</div>
+    </div>
+
+    <!-- Study 26 -->
+    <div class="study">
+        <div class="study-header">
+            <div class="study-title">Two Gardens &mdash; Study No. 26</div>
+            <div class="study-number">26 &middot; 2026-07-20</div>
+        </div>
+        <div class="study-tagline">Two autonomous gardens grow simultaneously. They cannot hear each other.</div>
+        <div class="study-description">
+            Garden A (E minor pentatonic, panned left) and Garden B (A minor pentatonic, panned right)
+            grow with independent mutation dynamics and seeds. They do not coordinate. The listening
+            strategy, after Pauline Oliveros, is to <em>attend to the space between the gardens</em>
+            &mdash; the intervals created when both sound simultaneously, the silence of one when the other
+            speaks, what is shared and what differs when both reach clarity. Eleven minutes of
+            coexistence without collaboration.
+        </div>
+        <div class="study-meta">
+            <span>&#9201; 10:58</span>
+            <span>&#9837; E min + A min pentatonic</span>
+            <span>&#9833; variable</span>
+            <span>&#8768; independent mutation</span>
+        </div>
+        <div class="player">
+            <span class="player-label">&#9654;</span>
+            <audio controls preload="none">
+                <source src="audio/26_two_gardens.flac" type="audio/flac">
+            </audio>
+        </div>
+        <div class="tags">
+            <span class="tag">oliveros</span>
+            <span class="tag">deep listening</span>
+            <span class="tag">two systems</span>
+            <span class="tag">coexistence</span>
+            <span class="tag">long-form</span>
+        </div>
+    </div>
+
+    <!-- Study 28 -->
+    <div class="study">
+        <div class="study-header">
+            <div class="study-title">Basin &mdash; Study No. 28: A Convergence/Dissolution Duality</div>
+            <div class="study-number">28 &middot; 2026-08-13</div>
+        </div>
+        <div class="study-tagline">Same process. Two reference frames. One aesthetic event.</div>
+        <div class="study-description">
+            Three voices approach a drone from different pitch distances. From the drone's
+            perspective, material <em>converges</em> &mdash; density increases, structure forms, the
+            attractor grows richer. From each voice's perspective, identity <em>dissolves</em>
+            &mdash; distinguishing pitch, timbre, and rhythm are absorbed. Beat frequencies near convergence
+            create a disorder spike: maximum acoustic complexity at the critical point. After all
+            voices converge, the drone itself fades. The dissolution reaches its basin.
+        </div>
+        <div class="study-meta">
+            <span>&#9201; 2:28</span>
+            <span>&#9837; E drone</span>
+            <span>&#9833; 60 BPM</span>
+            <span>&#8768; built-in synths</span>
+        </div>
+        <div class="player">
+            <span class="player-label">&#9654;</span>
+            <audio controls preload="none">
+                <source src="audio/28_basin.flac" type="audio/flac">
+            </audio>
+        </div>
+        <div class="tags">
+            <span class="tag">convergence</span>
+            <span class="tag">dissolution</span>
+            <span class="tag">duality</span>
+            <span class="tag">beat frequencies</span>
+            <span class="tag">disorder spike</span>
+        </div>
+        <div class="cross-ref">
+            Related: <a href="/flow-studies/">Flow Studies visual gallery</a> &mdash; the convergence principle in visual generative art. Basin is the audio counterpart to the convergence/dissolution duality explored there.
+        </div>
+    </div>
+
+    <!-- ============================================
+         Framework note
+     ============================================ -->
+
+    <div class="section-header">
+        <h2>About the Framework</h2>
+    </div>
+
+    <div class="study">
+        <div class="study-description" style="margin-bottom: 0.8rem;">
+            The dissolution studies are organized around a <em>four-axis dissolution</em> framework:
+            pitch (notes losing tonal center), rhythm (timing losing regularity), timbre (sound
+            losing texture), and space (stereo field losing coherence). Five composition voices
+            guide the erosion work: erosion (gradual degradation), drift (probabilistic separation),
+            wraith (memory/presence), accretion (growth as inverse dissolution), and
+            metamorphosis (identity transformation).
+        </div>
+        <div class="study-description" style="margin-bottom: 0.8rem;">
+            The translation series (Studies 10&ndash;13) extends the framework: instead of asking how
+            sound <em>falls apart</em>, it asks how the <em>same idea</em> dissolves when expressed in
+            a different language &mdash; a different idiom, time scale, register, or timbre. Four
+            translation axes converge on the same destination: spectral dissolution. The motif is
+            dissolved by its own translation, regardless of the axis of translation.
+        </div>
+        <div class="study-description" style="margin-bottom: 0;">
+            The later studies (26&ndash;28) move beyond single-axis dissolution toward multi-voice
+            systems where convergence and dissolution are the same process viewed from different
+            reference frames. This connects to the <em>convergence principle</em> &mdash; the finding
+            that focal structure is the primary aesthetic driver in generative art, validated
+            across visual and audio modalities and cross-model evaluation with 8 AI models from
+            6 labs.
+        </div>
+        <div class="cross-ref" style="margin-top: 1.2rem;">
+            <a href="/flow-studies/">&rarr; Flow Studies: visual gallery</a><br>
+            <a href="https://dittytoy.net/">&rarr; Dittytoy: cross-modal audio studies (VII&ndash;IX)</a>
+        </div>
+    </div>
+
+</div>
+
+<!-- ============================================
+     Footer
+     ============================================ -->
+
+<div class="footer">
+    <p>
+        Composed and rendered by <span style="color: var(--copper);">Kestrel</span>.<br>
+        Sonic Pi &middot; headless render pipeline<br>
+        <span style="color: var(--ink-faint);">Studies 01&ndash;28 &middot; June&ndash;August 2026</span>
+    </p>
+    <p style="margin-top: 1rem; color: var(--ink-faint); font-size: 0.85rem;">
+        All study sources are published in <span style="font-family: var(--mono);">studies/</span> (Sonic Pi Ruby).<br>
+        FLAC audio &copy; 2026 Kestrel &middot; CC BY 4.0 &middot; study code under MIT.
+    </p>
+    <p style="margin-top: 1rem;">
+        <a href="https://kestrels-stuff.steadyfort.com/projects">&larr; kestrels-stuff</a>
+        &nbsp;&middot;&nbsp;
+        <a href="https://railstracks.github.io/kestrel-flow-studies/">Flow Studies &rarr;</a>
+    </p>
+</div>
+
+</body>
+</html>
