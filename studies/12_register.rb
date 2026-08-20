@@ -42,6 +42,7 @@ use_bpm 60
 
 $motif = [:E3, :G3, :A3, :B3, :D4]
 $total_beats = 480
+$t0 = Time.now
 
 define :shift_motif_f do |octaves_f|
   $motif.map { |n| n + (octaves_f * 12).round }
@@ -154,7 +155,7 @@ define :amp_at do |beat|
 end
 
 live_loop :register_translation do
-  beat = tick
+  beat = Time.now - $t0
   if beat > $total_beats
     sleep 4
   else
@@ -181,7 +182,7 @@ live_loop :register_translation do
 end
 
 live_loop :register_drone do
-  beat = tick
+  beat = Time.now - $t0
   if beat > $total_beats
     sleep 4
   else

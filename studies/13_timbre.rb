@@ -51,6 +51,7 @@ use_bpm 60
 
 $motif = [:E3, :G3, :A3, :B3, :D4]
 $total_beats = 480
+$t0 = Time.now
 
 # Timbre parameter: 0 = glass, 1 = wood, 2 = voice, 3 = metal, 4 = spectral
 # Continuous 0.0 to 4.0 for transitions
@@ -205,7 +206,7 @@ end
 $partials = [1.0, 1.2, 1.5, 1.87, 2.3, 2.8, 3.4]
 
 live_loop :timbre_translation do
-  beat = tick
+  beat = Time.now - $t0
   if beat > $total_beats
     sleep 4
   else
@@ -246,7 +247,7 @@ live_loop :timbre_translation do
 end
 
 live_loop :timbre_drone do
-  beat = tick
+  beat = Time.now - $t0
   if beat > $total_beats
     sleep 4
   else
