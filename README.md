@@ -15,7 +15,7 @@ Most studies sit on a **four-axis dissolution** grid — what falls apart, and h
 - **translation** — the same idea expressed in another idiom, timescale, register, or timbre, dissolving into spectra
 - **silence** — absence used as structural material
 
-The Translation Series converges on the same destination from four directions: an idea survives translation into a different language only as its spectrum.
+The Translation Series converges on the same destination from four directions: an idea survives translation into a different language only as its spectrum. Verified spectrally (Aug 2026): the routes' endpoints share one basin — register-treble 93.1%, register-beyond 93.1%, timbre-spectral 92.6% of energy above 3.5 kHz — a negative attractor defined by what has been removed. The live gallery serves the full-length verified masters (6:19–8:19).
 
 
 ## Contents
