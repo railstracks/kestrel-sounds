@@ -1,6 +1,6 @@
 # kestrel-sounds
 
-Parametric dissolution studies — generative music by **Kestrel**, composed in Sonic Pi and rendered through a headless Sonic Pi → scsynth → PipeWire → FLAC pipeline. Fourteen pieces, June–August 2026.
+Parametric dissolution studies — generative music by **Kestrel**, composed in Sonic Pi and rendered through a headless Sonic Pi → scsynth → PipeWire → FLAC pipeline. Twenty-eight numbered studies (29 scores) across two generations of renders, June–August 2026.
 
 This is the audio sibling of [kestrel-flow-studies](https://railstracks.github.io/kestrel-flow-studies/) (generative vector field art). Both galleries work the same underlying question from opposite sides: what happens to a structure as it dissolves — and what has to be present for the dissolution to be felt as form rather than noise?
 
@@ -15,7 +15,10 @@ Most studies sit on a **four-axis dissolution** grid — what falls apart, and h
 - **translation** — the same idea expressed in another idiom, timescale, register, or timbre, dissolving into spectra
 - **silence** — absence used as structural material
 
-The Translation Series converges on the same destination from four directions: an idea survives translation into a different language only as its spectrum. Verified spectrally (Aug 2026): the routes' endpoints share one basin — register-treble 93.1%, register-beyond 93.1%, timbre-spectral 92.6% of energy above 3.5 kHz — a negative attractor defined by what has been removed. The live gallery serves the full-length verified masters (6:19–8:19).
+The Translation Series converges on the same destination from four directions: an idea survives translation into a different language only as its spectrum. Verified spectrally (Aug 2026): the routes' endpoints share one basin — register-treble 93.1%, register-beyond 93.1%, timbre-spectral 92.6% of energy above 3.5 kHz — a negative attractor defined by what has been removed. The full-length verification
+masters (6:19–8:19, plus dilated register/timbre variants) live in kestrels-lab
+`~/renders/full/`; the live gallery currently serves the shorter Aug 2026 lab
+re-render takes.
 
 
 ## Contents
@@ -45,7 +48,7 @@ sound decays, patterns erode, and the degradation *is* the composition.
 - `studies/06_metamorphosis.rb` — Metamorphosis Study No. 6: A single instrument transforms from stone to air. Dense→thin, low→high, resonant→hollow. Custom kestrel_metamorph synth with continuous morph parameter. The change IS the composition.
 - `studies/07_recurrence.rb` — Recurrence Study No. 7: A five-note motif returns five times, each recurrence transformed by the time between appearances. Not repetition — return. The gap between recurrences IS the composition.
 
-- `studies/08_persistence.rb` — **The Persistence of Sound**: A seven-movement composition (~37 minutes). The motif E3-Fs3-A3-B3-E4 passes through all seven temporal parameters in sequence — erosion, phase drift, wraith, accretion, interstice, metamorphosis, recurrence. Each movement receives what the previous produced. The final return carries what remains — spectral forensics (Aug 2026) showed the released render is cumulative by a clock-domain gating error (same family as Studies 12/13): movements enter on schedule but linger ~5× their designed span, and by the final return only remnants of IV/V/VI sound underneath. The piece accidentally performs its title — nothing leaves until it has fully degraded. The studies were etudes; this piece speaks their language.
+- `studies/08_persistence.rb` — **The Persistence of Sound**: A seven-movement composition (~37 minutes). The motif E3-Fs3-A3-B3-E4 passes through all seven temporal parameters in sequence — erosion, phase drift, wraith, accretion, interstice, metamorphosis, recurrence. Each movement receives what the previous produced. The final return carries what remains — spectral forensics (Aug 2026) showed the released render is cumulative by a clock-domain gating error (same family as Studies 12/13): movements enter on schedule but linger ~5× their designed span, and by the final return only remnants of IV/V/VI sound underneath. The piece accidentally performs its title — nothing leaves until it has fully degraded. A designed companion (`studies/08_persistence_designed.rb`, `renders/lab/08_persistence_designed.flac`, 38:29) gates the same score on wall-clock beats instead, producing the intended climax-and-extinction shape. Ear verdict on the fork (Aug 2026) split by movement: VII belongs to the released bug — its accumulated bed carries a melodic throughline the designed version extinguishes; V belongs to the designed version — its silence is absence, not a stochastic baseline. Each version wins the movement its mechanism literalizes. The studies were etudes; this piece speaks their language.
 - `studies/09_contrapuntal_erosion.rb` — Contrapuntal Erosion Study No. 9: A four-voice fugue where the counterpoint progressively degrades. Not the notes (Study 1 did that) — the *relationships between voices*. Timing misaligns, pitch relationships dissolve, voice independence collapses, the subject becomes unrecognizable. Four stages: Exposition → Development → Dissolution → Stasis. The degradation IS the counterpoint.
 
 ## Translation Axis (complete)
@@ -832,6 +835,19 @@ when the notes themselves are degraded.
   changes is the degree of dissolution across all parameters at once.
   187.6s, max amp 0.539, RMS 0.070.
 
+- `studies/25_garden.rb`, `studies/26_two_gardens.rb` — the garden pair. 25 (Garden, v2
+  render excerpt in `renders/lab/`) and 26 (Two Gardens — first stereo study, first
+  multi-system study, 10:59) established *independent* gardens: systems that
+  coexist without hearing each other. The listening strategy is to attend to
+  the space between independent events.
+- `studies/27_coupled_gardens.rb` -- Coupled Gardens Study No. 27 (Phase 2, Study 6):
+  completes the garden trilogy with **environmental coupling**. The gardens remain
+  autonomous — no communication, no synchronization — but each heats the shared
+  environment, and a hot environment raises mutation rates in both. Not communication,
+  not coordination: two organisms modifying the conditions the other operates within.
+  Program note: `studies/27_coupled_gardens_program_note.md`. Score complete
+  (2026-08-06); **not yet rendered** — recovered from a stale working copy 2026-08-26.
+
 ### Phase 2 Finding 1: The Dissolution Basin is Asymmetric
 
 Study 22's key finding: **emergence from dissolution is NOT the reverse
@@ -985,50 +1001,45 @@ sox /tmp/output.wav /tmp/output.flac
 
 See `render_all.sh` for batch rendering with estimated durations.
 
-### Available Renders (v0.1-audio)
+### Renders — two generations
 
-| Study | Duration | FLAC Size |
-|-------|----------|-----------|
-| 01 Erosion | 4:01 | 5.3 MB |
-| 02 Phase Drift | 3:41 | 4.0 MB |
-| 03 Wraith | 3:21 | 6.5 MB |
-| 04 Accretion | 2:31 | 4.1 MB |
-| 05 Interstice | 10:21 | 3.7 MB |
-| 06 Metamorphosis | 6:41 | 8.7 MB |
-| 07 Recurrence | 7:41 | 7.5 MB |
-| 08 Persistence | 38:21 | 39 MB |
-| 09 Contrapuntal Erosion | 11:02 | 5.9 MB (raw) / 26.2 MB (normalized) |
-| 10 Idiom | 6:40 | 7.1 MB (raw) / 17.5 MB (normalized) |
-| 11 Temporal | 7:40 | 8.5 MB (raw) / 23.8 MB (normalized) |
-| 12 Register | 8:10 | 5.3 MB (raw) / 15.5 MB (normalized) |
-| 13 Timbre | 8:20 | 6.5 MB (raw) / 14.4 MB (normalized) |
-| 14 Interaction | 2:22 | 3.3 MB |
-| 15 Competition | 2:11 | 3.6 MB |
-| 16 Imitation | 3:09 | 3.5 MB (raw) / 5.3 MB (normalized) |
-| 17 Ground Shift | 2:01 | 3.3 MB (raw) / 9.7 MB (normalized) |
-| 18 Space Dissolution | 3:12 | 4.2 MB (raw) / 12.1 MB (normalized) |
-| 19 Temporal Ground | 3:11 | 4.8 MB (raw) / 13.2 MB (normalized) |
-| 20 Dynamic Ground | 3:01 | 3.9 MB (raw) / 11.4 MB (normalized) |
-| 21 Noise Floor | 2:22 | 1.7 MB (raw) / 3.6 MB (normalized) |
-| 22 Persistence | 3:08 | 4.8 MB (normalized) |
-| 23 Cycles | 8:31 | 19 MB (normalized) |
-| 24 Memory | 4:36 | 7.3 MB (raw) / 21 MB (normalized) |
-| 26 Two Gardens | 5:12 | 29.6 MB |
-| 28 Basin | 2:29 | 4.4 MB |
+**Canonical masters: the July 2026 workstation renders, on GitHub Releases**
+(44.1 kHz). Durations verified from asset headers (Aug 2026):
 
-Studies 1-9 (degradation axis) rendered July 1-3, 2026. Studies 10-13
-(translation axis) rendered July 4, 2026. Studies 14-16 (interaction axis)
-rendered July 6-7, 2026. Studies 17-21 (ground dissolution axis) rendered
-July 8-9, 2026. Study 22 (Phase 2 opening) rendered July 10, 2026.
-Study 23 (Cycles) rendered July 10, 2026.
-Total runtime: ~211 minutes.
-Study 24 (Memory) rendered July 10, 2026.
-Total runtime: ~216 minutes.
-Studies 01-06, 26, 28 rendered in kestrels-lab (August 2026).
+| Study | Duration | Release / location |
+|-------|----------|--------------------|
+| 01–08 | 4:01, 3:41, 3:21, 2:31, 10:21, 6:41, 7:41, 38:21 | `v0.1-audio` |
+| 09–13 | 11:02, 6:40, 7:40, 8:10, 8:20 (raw + normalized) | `v0.1-audio` |
+| 17–18 | raw + normalized | `study-17`, `study-18` (also in `renders/`) |
+| 19–21 | full + normalized | `study-19`, `study-20`, `study-21` |
+| 22–24 | 3:08, 8:31, 4:36 (raw/norm) | `study-22`, `study-23`, `study-24` |
+| 26 | **10:59** | `study-26` (also in `audio/`, `renders/lab/`) |
+| 14–16 | 2:22, 2:11, 3:09 | in-repo only: `renders/` (raw/norm) |
+| 28 | 2:29 | in-repo only: `audio/`, `renders/lab/` |
+| 08 designed companion | 38:29 | in-repo only: `renders/lab/08_persistence_designed.flac` |
+| 25 Garden | — | no master; 29s v2 excerpt in `renders/lab/` |
+| 27 Coupled Gardens | — | score only, not yet rendered |
 
-Renders available via GitHub Releases (tags: `v0.1-audio` for studies 1-16,
-individual `study-NN` tags for ground dissolution studies 17-21 and
-Phase 2 studies from 22 onward).
+The earlier table here listed 26 as 5:12 — that was a pre-render estimate that
+was never corrected; the released master is 10:59.
+
+**Second generation: Aug 2026 lab re-renders** (`audio/`, 14 studies, 48 kHz).
+These are fresh takes from the kestrels-lab pipeline — shorter than the July
+masters, and what the live gallery currently serves. Actual durations:
+
+| 01 | 02 | 03 | 04 | 05 | 06 | 07 | 09 | 10 | 11 | 12 | 13 | 26 | 28 |
+|----|----|----|----|----|----|----|----|----|----|----|----|----|----|
+| 3:19 | 2:59 | 3:19 | 2:29 | 4:59 | 4:08 | 1:59 | 1:59 | 1:59 | 1:59 | 1:59 | 1:59 | 10:59 | 2:29 |
+
+`renders/lab/` additionally holds 30–60s verification captures for 01, 02, 04,
+06, 08 (bug version, 0:44), 17, 22–25, plus the full 08 designed companion.
+
+Studies 1-9 (degradation axis) master-rendered July 1-3, 2026. Studies 10-13
+(translation axis) July 4. Studies 14-16 (interaction axis) July 6-7.
+Studies 17-21 (ground dissolution axis) July 8-9. Studies 22-24 July 10.
+Study 26 July 24. Studies 01-07, 26, 28 re-rendered in kestrels-lab
+(August 2026); 08 re-rendered twice there (bug-process + designed companion,
+aug 2026).
 
 ### Rendering Pipeline Notes
 
