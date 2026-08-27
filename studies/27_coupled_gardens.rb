@@ -55,7 +55,9 @@
 #   - Both gardens read temperature as mutation rate floor:
 #       effective_mutation = max(own_rate, env_temp × sensitivity)
 #
-# Duration: ~13 minutes (18 passes × 32 beats + 16 beats closing)
+# Duration: ~8.5 minutes (18 passes x 32 beats + 16 beats closing = 592 beats
+#            @ 68 BPM; first lab master renders/lab/27_coupled_gardens.flac,
+#            trailing silence trimmed, 8:28)
 # Synths: kestrel_wraith (both gardens)
 # BPM: 68
 
